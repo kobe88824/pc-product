@@ -1,0 +1,2002 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>商品详情</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/particulars.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/jquery.city.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+</head>
+
+<body>
+    <!-- 页面头部 -->
+    <div class="header">
+        <div class="header-content clearfix">
+            <div class="header-left">
+                <a href="index.php" class="header-home m">莱顿首页</a>
+            </div>
+            <div class="header-right">
+                <ul class="clearfix">
+                    <li><a href="#" class="user-name"></a> 您好,欢迎来到莱顿商城! </li>
+                    <li class="login">
+                        <a class="login-button">[请登录]</a>
+                        <a href="register.html" class="register-button">[免费注册]</a>
+                        <a class="exit-button">[退出]</a>
+                    </li>
+                    <li class="js_myaccount line">
+                        <div class="myaccount">
+                            <a href="personalCenter.html">我的莱顿</a>
+                            <i class="fa fa-angle-down"></i>
+                        </div>
+                        <div class="myaccount-list">
+                            <a href="#">我的订单</a>
+                            <a href="#">我的收藏</a>
+                            <a href="#">我的消息</a>
+                        </div>
+                    </li>
+                    <li class="js_down-app line">
+                        <div class="phone-box">
+                            <a href="#" class="phone">手机莱顿</a>
+                            <i class="fa fa-angle-down"></i>
+                        </div>
+                        <div class="down-app">
+                            <img src="images/index/uleapp.jpg" alt="">
+                        </div>
+                    </li>
+                    <li class="js_all-class line">
+                        <div class="all-class">
+                            <i class="ico-all-class"></i>
+                            <a href="#">全部商品分类</a>
+                            <i class="fa fa-angle-down"></i>
+                        </div>
+                        <div class="all-class-list-box">
+                            <div class="all-class-list">
+                                <ul class="clearfix">
+                                    <li>
+                                        <h4>
+                                            <a href="#">美妆洗护</a>
+                                            <a href="#" class="more">
+                                                <i class="fa fa-chevron-circle-right"></i>
+                                            </a>
+                                        </h4>
+                                        <p class="clearfix">
+                                            <a href="#">美发护发</a>
+                                            <a href="#">面部护肤</a>
+                                            <a href="#">女性护理</a>
+                                            <a href="#">香水彩妆</a>
+                                            <a href="#">口腔护理</a>
+                                            <a href="#">身体护理</a>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <h4>
+                                            <a href="#">女装、饰品</a>
+                                            <a href="#" class="more">
+                                                <i class="fa fa-chevron-circle-right"></i>
+                                            </a>
+                                        </h4>
+                                        <p class="clearfix">
+                                            <a href="#">帽子</a>
+                                            <a href="#">衬衫</a>
+                                            <a href="#">连衣裙</a>
+                                            <a href="#">针织衫毛衣</a>
+                                            <a href="#">短外套</a>
+                                            <a href="#">文胸</a>
+                                            <a href="#">女袜</a>
+                                            <a href="#">丝巾/围巾/手套</a>
+                                            <a href="#">镶嵌饰品</a>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <h4>
+                                            <a href="#">家居生活</a>
+                                            <a href="#" class="more">
+                                                <i class="fa fa-chevron-circle-right"></i>
+                                            </a>
+                                        </h4>
+                                        <p class="clearfix">
+                                            <a href="#">家纺</a>
+                                            <a href="#">生活日用</a>
+                                            <a href="#">五金装潢</a>
+                                            <a href="#">家装建材</a>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <h4>
+                                            <a href="#">汽车用品</a>
+                                            <a href="#" class="more">
+                                                <i class="fa fa-chevron-circle-right"></i>
+                                            </a>
+                                        </h4>
+                                        <p class="clearfix">
+                                            <a href="#">行车记录仪</a>
+                                            <a href="#">润滑油</a>
+                                            <a href="#">座垫/座套</a>
+                                            <a href="#">维修配件</a>
+                                            <a href="#">内饰</a>
+                                            <a href="#">脚垫</a>
+                                            <a href="#">除味</a>
+                                            <a href="#">美容</a>
+                                            <a href="#">添加剂</a>
+                                            <a href="#">4S服务</a>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <h4>
+                                            <a href="#">特色美食</a>
+                                            <a href="#" class="more">
+                                                <i class="fa fa-chevron-circle-right"></i>
+                                            </a>
+                                        </h4>
+                                        <p class="clearfix">
+                                            <a href="#">休闲零食</a>
+                                            <a href="#">饮料冲调</a>
+                                            <a href="#">厨房调料</a>
+                                            <a href="#">中外名酒</a>
+                                            <a href="#">特供礼盒</a>
+                                            <a href="#">营养滋补</a>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <h4>
+                                            <a href="#">魅力男装</a>
+                                            <a href="#" class="more">
+                                                <i class="fa fa-chevron-circle-right"></i>
+                                            </a>
+                                        </h4>
+                                        <p class="clearfix">
+                                            <a href="#">衬衫</a>
+                                            <a href="#">T恤/POLO衫</a>
+                                            <a href="#">牛仔裤</a>
+                                            <a href="#">夹克/外套</a>
+                                            <a href="#">男士内裤</a>
+                                            <a href="#">休闲裤</a>
+                                            <a href="#">西装</a>
+                                            <a href="#">棉服</a>
+                                            <a href="#">羽绒服</a>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <h4>
+                                            <a href="#">厨卫清洁</a>
+                                            <a href="#" class="more">
+                                                <i class="fa fa-chevron-circle-right"></i>
+                                            </a>
+                                        </h4>
+                                        <p class="clearfix">
+                                            <a href="#">清洁剂</a>
+                                            <a href="#">清洁工具</a>
+                                            <a href="#">一次性用品</a>
+                                            <a href="#">精美餐具</a>
+                                            <a href="#">厨具</a>
+                                            <a href="#">水具酒具</a>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <h4>
+                                            <a href="#">手机数码</a>
+                                            <a href="#" class="more">
+                                                <i class="fa fa-chevron-circle-right"></i>
+                                            </a>
+                                        </h4>
+                                        <p class="clearfix">
+                                            <a href="#">手机通讯</a>
+                                            <a href="#">手机配件</a>
+                                            <a href="#">摄影摄像</a>
+                                            <a href="#">数码配件</a>
+                                            <a href="#">数码影音</a>
+                                            <a href="#">智能设备</a>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <h4>
+                                            <a href="#">进口食品</a>
+                                            <a href="#" class="more">
+                                                <i class="fa fa-chevron-circle-right"></i>
+                                            </a>
+                                        </h4>
+                                        <p class="clearfix">
+                                            <a href="#">进口乳制品</a>
+                                            <a href="#">进口饼干糕点</a>
+                                            <a href="#">进口糖果/巧克力</a>
+                                            <a href="#">进口果干/蜜饯</a>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <h4>
+                                            <a href="#">箱包鞋帽</a>
+                                            <a href="#" class="more"
+                                                ">
+                                                    <i class=" fa
+                                                fa-chevron-circle-right"></i>
+                                            </a>
+                                        </h4>
+                                        <p class="clearfix">
+                                            <a href="#">功能箱包</a>
+                                            <a href="#">时尚女包</a>
+                                            <a href="#">精品男包</a>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <h4>
+                                            <a href="#">电脑办公</a>
+                                            <a href="#" class="more">
+                                                <i class="fa fa-chevron-circle-right"></i>
+                                            </a>
+                                        </h4>
+                                        <p class="clearfix">
+                                            <a href="#">电脑整机</a>
+                                            <a href="#">电脑硬件</a>
+                                            <a href="#">外设产品</a>
+                                            <a href="#">网络设备</a>
+                                            <a href="#">游戏设备</a>
+                                            <a href="#">办公设备</a>
+                                            <a href="#">文具/耗材</a>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <h4><a href="#">家用电器</a>
+                                            <a href="#" class="more">
+                                                <i class="fa fa-chevron-circle-right"></i>
+                                            </a>
+                                        </h4>
+                                        <p class="clearfix">
+                                            <a href="#">个人护理电器</a>
+                                            <a href="#">厨房电器</a>
+                                            <a href="#">生活电器</a>
+                                            <a href="#">大家电</a>
+                                        </p>
+                                    </li>
+                                    <!-- <li style="display: none;">
+                                            <h4>
+                                                <a href="#" >保健品</a> 
+                                                <a href="#" class="more" >more</a>
+                                            </h4>
+                                            <p>
+                                                <a href="#" >增强免疫力/抗疲劳 </a>
+                                                <a href="#" >减肥瘦身 </a>
+                                                <a href="#" >调节血压/血脂/血糖 </a>
+                                                <a href="#" >养生参茸食材 </a>
+                                                <a href="#" >美容养颜 </a>
+                                                <a href="#" >男/女性调养 </a>
+                                                <a href="#" >儿童营养 </a>
+                                            </p>
+                                        </li> -->
+                                    <li>
+                                        <h4>
+                                            <a href="#">运动户外</a>
+                                            <a href="#" class="more">
+                                                <i class="fa fa-chevron-circle-right"></i>
+                                            </a>
+                                        </h4>
+                                        <p class="clearfix">
+                                            <a href="#">户外服饰</a>
+                                            <a href="#">户外鞋</a>
+                                            <a href="#">户外装备</a>
+                                            <a href="#">运动服饰</a>
+                                            <a href="#">运动鞋包</a>
+                                            <a href="#">运动配件</a>
+                                            <a href="#">运动器材</a>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <h4>
+                                            <a href="#">母婴玩具</a>
+                                            <a href="#" class="more">
+                                                <i class="fa fa-chevron-circle-right"></i>
+                                            </a>
+                                        </h4>
+                                        <p class="clearfix">
+                                            <a href="#">奶粉</a>
+                                            <a href="#">尿裤湿巾</a>
+                                            <a href="#">玩具书籍</a>
+                                            <a href="#">哺喂用品</a>
+                                            <a href="#">洗护用品</a>
+                                            <a href="#">宝宝服饰</a>
+                                            <a href="#">儿童服饰</a>
+                                            <a href="#">童车童床</a>
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="site-map-box line">
+                        <div class="site-map">
+                            <a href="#">网站地图</a>
+                        </div>
+                    </li>
+                    <li class="js_help-center line">
+                        <div class="help-center">
+                            <a href="#">帮助中心</a>
+                            <i class="fa fa-angle-down"></i>
+                        </div>
+                        <div class="help-center-list">
+                            <a href="#">购物指南</a>
+                            <a href="#">支付帮助</a>
+                            <a href="#">配送方式</a>
+                            <a href="#">售后服务</a>
+                            <a href="#">关于邮乐</a>
+                        </div>
+                    </li>
+                    <li class="call-box line">
+                        <div class="call">
+                            <i class="ico-call"></i>
+                            <span>11185</span>
+                            <div class="service"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="ceng">
+            <div class="login-register">
+                <span class="login-register-tab1">登录</span>
+                <div class="login">
+                    <p>
+                        <input type="text" name="user" class="user" placeholder="请输入登录手机号/邮箱">
+                    </p>
+                    <span class="err1">帐号不存在</span>
+                    <p>
+                        <input type="password" name="pwd" class="pwd" placeholder="请输入密码">
+                    </p>
+
+                    <span class="err2">密码错误</span>
+
+                    <p>
+                        <input type="checkbox">30天内自动登录
+                        <span class="findPWD">找回密码</span>
+                        <span> | </span>
+                        <span>无法登陆</span>
+                    </p>
+                    <button>登录</button>
+                </div>
+                <div class="register"></div>
+            </div>
+        </div>
+    </div>
+    <!-- 搜索框 -->
+    <div class="search clearfix">
+        <!-- 网站图标 -->
+        <div class="trademark">
+            <a href="index.php" rel="noopener noreferrer"></a>
+        </div>
+        <!-- 搜索框 -->
+        <div class="search-box">
+            <input type="text" class="frame" placeholder="请输入搜索内容">
+            <button type="submit" class="search-all">搜索商品</button>
+            <button type="submit" class="search-shop">搜索本店</button>
+            <p class="search-about">
+                <span>相关搜索：</span>
+                <a href="http://" rel="noopener noreferrer">精准扶贫</a>
+                <a href="http://" rel="noopener noreferrer">中国集邮</a>
+                <a href="http://" rel="noopener noreferrer">新鲜水果</a>
+                <a href="http://" rel="noopener noreferrer">奶粉</a>
+                <a href="http://" rel="noopener noreferrer">潮流女鞋</a>
+                <a href="http://" rel="noopener noreferrer">洗发护发</a>
+                <a href="http://" rel="noopener noreferrer">剃须刀</a>
+                <a href="http://" rel="noopener noreferrer">坚果炒货</a>
+                <a href="http://" rel="noopener noreferrer">纸巾</a>
+            </p>
+            <ul class="search-list"></ul>
+        </div>
+    </div>
+    <!-- 商铺头部 -->
+    <div class="storeheader clearfix">
+        <div class="exceed">
+            <div class="store-content clearfix">
+                <div class="store-name">
+                    <a href="http://" rel="noopener noreferrer">
+                        <!-- <span class="vertical">|</span> -->
+                        <span class="shop">&nbsp;&nbsp;木易生活专柜</span>
+                        <span class="star">
+                            <img src="images/particulars/ratestar2.png" alt="">
+                            <span>5</span>
+                            <i class="fa fa-angle-down"></i>
+                        </span>
+                        <!-- <span class="vertical">|</span> -->
+                    </a>
+                    <!-- 隐藏的商铺总评分 开始-->
+                    <div class="particulars">
+                        <p class="sum">店铺总评分<strong>5</strong></p>
+                        <p><span>描述相符</span><span>服务态度</span><span>发货速度</span></p>
+                        <p class="shu"><span>5</span><span>5</span><span>5</span></p>
+                        <div class="browse">
+                            <a href="http://" rel="noopener noreferrer" class="f1">浏览店铺</a>
+                            <i class="fa fa-heart"></i>
+                            <a href="http://" rel="noopener noreferrer" class="f2">收藏店铺</a>
+                        </div>
+                    </div>
+                    <!-- 隐藏的商铺总评分 结束-->
+                </div>
+                <!-- 收藏店铺 开始 -->
+                <div class="notescontact">
+                    <a href="http://" rel="noopener noreferrer">
+                        <img src="images/particulars/btn_service_offline.png"
+                            alt="">
+                    </a>
+                </div>
+                <!-- 收藏店铺 结束 -->
+                <div class="shop-right">
+                    <span class="heart"></span>
+                    <a href="http://" rel="noopener noreferrer" class="collect">收藏店铺</a>
+                    <a href="car.html" rel="noopener noreferrer">
+                        <div class="shop-car">
+                            <span class="zi">购物车</span>
+                        </div>
+                    </a>
+                    <div class="two-dimensional-code">
+                        <div class="triangle"></div>
+                        <img src="images/particulars/generate.jpg" alt="">
+                        <p>手机邮乐随心逛</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 商品属于哪一类里面 开始 -->
+    <div class="classify">
+        <a href="index.html" rel="noopener noreferrer">首页</a>
+        <span>></span>
+        <a href="" rel="noopener noreferrer">特色美食</a>
+        <span>></span>
+        <a href="" rel="noopener noreferrer">休闲零食</a>
+        <span>></span>
+        <a href="" rel="noopener noreferrer">肉类零食</a>
+        <span>></span>
+        <span>正宗烤海鸭蛋咸鸭蛋40-49g 6枚简装非高邮咸鸭蛋</span>
+    </div>
+    <!-- 商品购买 -->
+    <div class="commodity clearfix">
+        <div class="preview">
+
+            <div class="pic">
+                <div class="glass"></div>
+                <div class="tap-event">
+                    <p>拼团</p>
+                </div>
+            </div>
+            <div class="spec-items">
+                <ul class="clearfix">
+                    <li>
+                        <img src="images/particulars/be502441169d5747_p800x800_m.jpg"
+                            alt="" class="samll-pic">
+                    </li>
+                    <li>
+                        <img src="images/particulars/b19c3c8628b407e8_p800x800_m.jpg"
+                            alt="" class="samll-pic">
+                    </li>
+                    <li>
+                        <img src="images/particulars/8bef284808bc6165_p800x800_m.jpg"
+                            alt="" class="samll-pic">
+                    </li>
+                </ul>
+            </div>
+            <div class="big-pic"></div>
+        </div>
+        <div class="product-info">
+            <h1>正宗烤海鸭蛋咸鸭蛋40-49g 6枚简装非高邮咸鸭蛋</h1>
+            <p class="shop-num">商品号 <span>364847401</span></p>
+            <div class="huodong clearfix">
+                <div class="font">
+                    <p>拼团</p>
+                </div>
+                <div class="count-down"></div>
+            </div>
+            <div class="price">
+                <div>
+                    <span class="f1">￥9.9</span>
+                    <span class="f2">团购价</span>
+                    <span class="original">￥12.9</span>
+                </div>
+                <div>
+                    <p>满2人团购售价为9.9元 (7.67折)</p>
+                    <p>(共1档折扣)</p>
+                </div>
+                <div class="canning">
+                    <div class="bg">扫码团购</div>
+                    <div class="canning-box">
+                        <div class="line"></div>
+                        <div class="logo-zi">手机扫码参与团购</div>
+                        <img src="images/particulars/generate.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="item clearfix">
+                <div>
+                    <div> <span>配送</span>江苏省 南通市<span class="zhi">至</span></div>
+                    <div class="select">
+                        <input type="text" class="address" placeholder="请输入省市区">
+                    </div>
+                </div>
+
+            </div>
+            <div class="serve clearfix">
+                <div class="serve-zi">服务</div>
+                <div>
+                    本商品由邮乐网<a href="http://" rel="noopener noreferrer">木易生活专柜</a>提供<br>
+                    并进行相关配送和售后等服务。
+                </div>
+            </div>
+            <div class="standard">
+                <div class="clearfix">
+                    <div class="standard-font">规格</div>
+                    <div class="standard-num">
+                        <span class="kuey">6</span>
+                        <div class="standard-logo"></div>
+                    </div>
+                </div>
+                <div class="figure clearfix">
+                    <div class="standard-font">数量</div>
+                    <div class="subtract">-</div>
+                    <input type="text" class="scale" value="1">
+                    <div class="add">+</div>
+                </div>
+                <div>
+                    <div class="standard-font">数量</div>
+                    <span class="attrCubetext sty">6枚,</span>
+                    <span class="pCounttext sty">1件</span>
+                </div>
+            </div>
+            <div class="group-buying">
+                <a href="" rel="noopener noreferrer">
+                    <div class="btn">
+                        <span>一键开团</span>
+                    </div>
+                    <a href="" rel="noopener noreferrer" class="buy">原价购买</a>
+                    <span class="add-car">加入购物车</span>
+                </a>
+
+            </div>
+            <div class="product-floor">
+                承诺服务&nbsp;&nbsp;
+                <span>不支持7天无理由退货</span>
+            </div>
+        </div>
+        <!-- 商品购买右侧轮播  -->
+        <div class="store-hots">
+            <h3 class="title">店铺热销</h3>
+            <div class="shop-hots clearfix">
+                <ul>
+                    <li>
+                        <a href="http://" rel="noopener noreferrer" title="正宗烤海鸭蛋咸鸭蛋40-49g 6枚简装非高邮咸鸭蛋">
+                            <img src="images/particulars/28d34ba47c0a3d33_p450x450_sl.jpg"
+                                alt="">
+                            <span>￥12.90</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://" rel="noopener noreferrer" title="百分果  每日坚果4天装   25克*4包， 缤纷果仁 每日果仁">
+                            <img src="images/particulars/6c20c4f83800384c_p800x800_sl.jpg"
+                                alt="">
+                            <span>￥15.90</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://" rel="noopener noreferrer" title="正宗烤海鸭蛋咸鸭蛋40-49g 6枚简装非高邮咸鸭蛋">
+                            <img src="images/particulars/28d34ba47c0a3d33_p450x450_sl.jpg"
+                                alt="">
+                            <span>￥12.90</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="http://" rel="noopener noreferrer" title="亏本冲量   什锦红枣夹核桃500g  和田大红枣加核桃仁葡萄干">
+                            <img src="images/particulars/89dff64a4c838d33_p800x800.png"
+                                alt="亏本冲量   什锦红枣夹核桃500g  和田大红枣加核桃仁葡萄干">
+                            <span>￥19.90</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://" rel="noopener noreferrer" title="【买2份，发一斤】俄罗斯风味国产紫皮糖夹心巧克力结婚喜糖果年货200g">
+                            <img src="images/particulars/0bf72aeb43e255eb_p800x800_sl.jpg"
+                                alt="">
+                            <span>￥9.90</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://" rel="noopener noreferrer" title="海婷海带丝香辣味下饭菜40g*5包  海婷麻辣海带榨菜【拍2份多送5包】">
+                            <img src="images/particulars/f1c554c4f238d8f1_p500x500_sl.jpg"
+                                alt="">
+                            <span>￥12.90</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="http://" rel="noopener noreferrer" title="口水娃口水鱼13g*10袋湖南小吃零食品小毛毛鱼混合口味">
+                            <img src="images/particulars/484506a11ec8f82c_p800x800_sl.jpg"
+                                alt="口水娃口水鱼13g*10袋湖南小吃零食品小毛毛鱼混合口味">
+                            <span>￥7.90</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://" rel="noopener noreferrer" title="【5袋抢购】皇子重庆酸辣粉106g/袋*5粉丝">
+                            <img src="images/particulars/c27b0180a739bab9_p800x800_sl.jpg"
+                                alt="">
+                            <span>￥13.90</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://" rel="noopener noreferrer" title="[水益农每日坚果25g*5袋]混合坚果儿童孕妇零食坚果大礼包">
+                            <img src="images/particulars/8c3a47fe9d92228b_p800x800_sl.jpg"
+                                alt="">
+                            <span>￥15.90</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="http://" rel="noopener noreferrer" title="皮皮佗湖南特产香辣鸭脖独立13g*5小包休闲零食小吃鸭脖">
+                            <img src="images/particulars/e90b2961fc535356_p480x480_sl.jpg"
+                                alt="皮皮佗湖南特产香辣鸭脖独立13g*5小包休闲零食小吃鸭脖">
+                            <span>￥7.90</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://" rel="noopener noreferrer" title="亏本冲量  酒鬼花生500g 麻辣花生休闲下酒！">
+                            <img src="images/particulars/e4b5b9a8129e7463_p800x800_sl.jpg"
+                                alt="">
+                            <span>￥12.90</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://" rel="noopener noreferrer" title="蓝牙耳机M165蓝牙耳机入耳式商务车载便携式4.1">
+                            <img src="images/particulars/39cc8cbbdb29404e_p750x750_sl.jpg"
+                                alt="">
+                            <span>￥69.00</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="http://" rel="noopener noreferrer" title="夏威夷果总重500g  奶油味坚果干果零食特产送开口器">
+                            <img src="images/particulars/b4d0ab1ec37428ab_p800x800_sl.jpg"
+                                alt="夏威夷果总重500g  奶油味坚果干果零食特产送开口器">
+                            <span>￥39.90</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://" rel="noopener noreferrer" title="百分果 每日坚果多种混合果仁10天装   250g   缤纷果仁孕妇干果">
+                            <img src="images/particulars/6c20c4f83800384c_p800x800_sl.jpg"
+                                alt="">
+                            <span>￥26.90</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://" rel="noopener noreferrer" title="百分果 新疆特产特级黑加仑葡萄干200g黑葡萄干提子干果零食">
+                            <img src="images/particulars/b0ecd32496384224_p800x800_sl.jpg"
+                                alt="">
+                            <span>￥12.90</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="page-box clearfix">
+                <div class="left">
+                    <</div> <span>1/5</span>
+                        <div class="right">></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 页面主体部分 商品详情信息  -->
+    <div class="shop-main">
+        <div class="content clearfix">
+            <div class="left-nav">
+                <div class="merchant">
+                    <h3>商家信息</h3>
+                    <div class="store-con">
+                        <div class="store-info">
+                            <p>
+                                <a href="" rel="noopener noreferrer">木易生活专柜</a>
+                                <span></span>
+                            </p>
+                        </div>
+                        <div class="middle">
+                            <h4>
+                                店铺总评分：
+                                <strong>5</strong>
+                            </h4>
+                            <ul>
+                                <li>描述相符：5</li>
+                                <li>服务态度：5</li>
+                                <li>发货速度：5</li>
+                            </ul>
+                        </div>
+
+                        <div class="view-store">
+                            <a href="http://" rel="noopener noreferrer">浏览商铺</a>
+                            <span>收藏店铺</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="classify">
+                    <h3>店铺商品分类</h3>
+                    <ul>
+                        <li class="select1">百分果</li>
+                        <li class="select2">生活日记</li>
+                        <li class="select2">美能格移动电源</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="content-shop">
+                <div class="related">
+                    <h2>相关商品推荐</h2>
+                </div>
+                <div class="related-shop">
+                    <ul class="clearfix">
+                        <li>
+                            <a href="" rel="noopener noreferrer" title="【6枚装】烤海鸭蛋咸鸭蛋40-49g 6枚简装非高邮咸鸭蛋">
+                                <img src="images/particulars/28d34ba47c0a3d33_p450x450_sl.jpg"
+                                    alt="">
+                            </a>
+                            <a class="related-name" href="" rel="noopener noreferrer" title="【6枚装】烤海鸭蛋咸鸭蛋40-49g 6枚简装非高邮咸鸭蛋">【6枚装】烤海鸭蛋咸鸭蛋40-49g
+                                6枚简装非高邮咸鸭蛋</a>
+                            <p><span class="new">￥12.90</span><span class="old">￥0.00</span></p>
+                            <span class="addcart">加入购物车</span>
+                        </li>
+                        <li>
+                            <a href="" rel="noopener noreferrer" title="【江门台山馆】老广的味道烤海鸭蛋10只、非高邮咸鸭蛋流油红树林盐蛋流油红心不咸鸭蛋">
+                                <img src="images/particulars/75b874cef124c77b_p800x800_sl.jpg"
+                                    alt="">
+                            </a>
+                            <a class="related-name" href="" rel="noopener noreferrer" title="【江门台山馆】老广的味道烤海鸭蛋10只、非高邮咸鸭蛋流油红树林盐蛋流油红心不咸鸭蛋">【江门台山馆】老广的味道烤海鸭蛋10只、非高邮咸鸭蛋流油红树林盐蛋流油红心不咸鸭蛋</a>
+                            <p><span class="new">￥18.00</span><span class="old">￥22.80</span></p>
+                            <span class="addcart">加入购物车</span>
+                        </li>
+                        <li>
+                            <a href="" rel="noopener noreferrer" title="【洪湖馆】咸鸭蛋70g*20枚正宗红心流油咸蛋黄特产包邮非海鸭蛋">
+                                <img src="images/particulars/01c548c893773aec_p800x800_sl.jpg"
+                                    alt="">
+                            </a>
+                            <a class="related-name" href="" rel="noopener noreferrer" title="【洪湖馆】咸鸭蛋70g*20枚正宗红心流油咸蛋黄特产包邮非海鸭蛋">【洪湖馆】咸鸭蛋70g*20枚正宗红心流油咸蛋黄特产包邮非海鸭蛋</a>
+                            <p><span class="new">￥39.90</span><span class="old">￥45.00</span></p>
+                            <span class="addcart">加入购物车</span>
+                        </li>
+                        <li>
+                            <a href="" rel="noopener noreferrer" title="【大连馆】鑫岛蛋庄河特产正宗流油烤鸭蛋非高邮鸭蛋 25枚装 包邮">
+                                <img src="images/particulars/ad8f7394f1c180f6_p800x600_sl.jpg"
+                                    alt="">
+                            </a>
+                            <a class="related-name" href="" rel="noopener noreferrer" title="【大连馆】鑫岛蛋庄河特产正宗流油烤鸭蛋非高邮鸭蛋 25枚装 包邮">【大连馆】鑫岛蛋庄河特产正宗流油烤鸭蛋非高邮鸭蛋
+                                25枚装 包邮</a>
+                            <p><span class="new">￥70.00</span><span class="old">￥90.00</span></p>
+                            <span class="addcart">加入购物车</span>
+                        </li>
+                        <li>
+                            <a href="" rel="noopener noreferrer" title="【6枚装】烤海鸭蛋咸鸭蛋40-49g 6枚简装非高邮咸鸭蛋">
+                                <img src="images/particulars/7459cb11ba3b3de9_p450x450_sl.jpg"
+                                    alt="">
+                            </a>
+                            <a class="related-name" href="" rel="noopener noreferrer" title="【6枚装】烤海鸭蛋咸鸭蛋40-49g 6枚简装非高邮咸鸭蛋">【6枚装】烤海鸭蛋咸鸭蛋40-49g
+                                6枚简装非高邮咸鸭蛋</a>
+                            <p><span class="new">￥12.80</span><span class="old">￥18.90</span></p>
+                            <span class="addcart">加入购物车</span>
+                        </li>
+                        <li>
+                            <a href="" rel="noopener noreferrer" title="邮鲜生 北部湾红树林烤海鸭蛋咸鸭蛋礼盒装20枚（防城港）">
+                                <img src="images/particulars/8f26b2c6f49a1b52_p800x800_sl.jpg"
+                                    alt="">
+                            </a>
+                            <a class="related-name" href="" rel="noopener noreferrer" title="邮鲜生 北部湾红树林烤海鸭蛋咸鸭蛋礼盒装20枚（防城港）">邮鲜生
+                                北部湾红树林烤海鸭蛋咸鸭蛋礼盒装20枚（防城港）</a>
+                            <p><span class="new">￥45.00</span><span class="old">￥45.00</span></p>
+                            <span class="addcart">加入购物车</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="year">
+                    <a href="" rel="noopener noreferrer">
+                        <img src="images/particulars/80371447dac3c892_-1x-1.jpg"
+                            alt="">
+                    </a>
+                </div>
+                <!-- 商品详情tab选项 -->
+                <div class="tab-holder">
+                    <ul class="clearfix">
+                        <li>
+                            商品详情
+                        </li>
+                        <li class="shop-comment">
+                            商品评论
+                            <em>(380)</em>
+
+                        </li>
+                        <li>
+                            商品咨询
+                        </li>
+                        <li>
+                            物流配送
+                        </li>
+                    </ul>
+                </div>
+                <!-- 商品详情tab切换 -->
+                <div class="big-box">
+                    <!-- 商品详情 下面的块 开始 -->
+                    <div class="attribute">
+                        <div class="detail">
+                            <h3>商品属性</h3>
+                            <ul class="clearfix">
+                                <li>口味：
+                                    <span>其他</span>
+                                </li>
+                                <li>包装方式：
+                                    <span>袋装</span>
+                                </li>
+                                <li>分类：
+                                    <span>即食蛋制品</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="shop-img">
+                        </div>
+
+                        <div class="statement">
+                            <div class="pldge">
+                                <h3>声明与提醒：</h3>
+                                <p>1、邮乐网是第三方服务交易平台，不是商品的销售方，邮乐网不提供任何形式的保证。</p>
+                                <p>2、本商品销售页面上展示的所有信息，包括但不限于商品标题、详情、参数、计量单位、价格及宣传广告等，均由商家自行提供，其商品质量及商品相关合法性、真实性和准确性等所有涉及商品销售事宜由商家负责。用户如有任何疑问，请与商家联系，相关发票及售后服务均由商家提供。</p>
+                                <p>3、价格说明：</p>
+                                <p>
+                                    <b>划线价格：</b>
+                                    指商品专柜价、吊牌价、指导价、正品零售价或该商品曾经展示过的销售价等，并非商品的原价， 仅供您参考。
+                                </p>
+                                <p>
+                                    <b>为划线价格：</b>
+                                    指商品在邮乐上的销售价格，但是具体的成交价格可能会因使用优惠券、积分等发生变化，最 终以订单结算页价格为准。
+                                </p>
+                                <p>4、商家延迟发货/商家单方面取消订单说明：</p>
+                                <p>商家的发货时间，以快递公司系统内记录的时间为准。延迟发货的，商家需赔付消费者订单金额20%，最低20元，最高不超过100元的邮乐无门槛优惠券：</p>
+                                <p>（1）消费者下单成功后24小时内，商家未将消费者订购商品的快递单号上传至系统（以邮乐系统内记录的时间为准）。</p>
+                                <p>（2）定制、预售及其他特殊情形等另行约定时间的商品，实际商家未按照约定时间发货。</p>
+                                <p>（3）商家自主取消订单的。</p>
+                                <p>（4）同一用户在10日内对同一商品多次下单的，仅赔付一次。</p>
+                                <p>同一用户的判定规则：相同的用户帐号ID</p>
+                                <p>同一商品的判定规则：相同的商品ID</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 商品详情 下面的块 结束 -->
+                    <!-- 商品评价 开始 -->
+                    <div class="comment">
+                        <ul class="comment-list clearfix">
+                        </ul>
+                        <div class="spage">
+                            <span class="left-arrow" title="上一页">
+                                <</span> <a href="##">1</a>
+                                    <a href="##">2</a>
+                                    <a href="##">3</a>
+                                    <span>...</span>
+                                    <a href="##">23</a>
+                                    <span class="right-arrow" title="下一页">></span>
+                                    <span>共</span>
+                                    <span class="gross">23</span>
+                                    <span>页</span>
+                                    <span class="pageswitch">
+                                        到第
+                                        <input type="text" value="1">
+                                        页
+                                        <button class="btn">确定</button>
+                                    </span>
+                        </div>
+                    </div>
+                    <!-- 商品评价 结束 -->
+                    <!-- 商品咨询 开始 -->
+                    <div class="consult">
+                        <p>此商品暂时没有咨询！</p>
+                        <div class="consult-title">
+                            向商家咨询
+                            <span>（问题提交后显示可能会延迟，请耐心等待）</span>
+                        </div>
+                        <div class="write-send">
+                            <span class="angle"></span>
+                            <table class="table-pos">
+                                <tr>
+                                    <th>咨询类型：</th>
+                                    <td>
+                                        <select name="" id="test" class="choose">
+                                            <option value="">请选择咨询类型</option>
+                                            <option value="2">商品咨询</option>
+                                            <option value="3">运费咨询</option>
+                                            <option value="4">退换货事宜</option>
+                                            <option value="5">网站使用</option>
+                                            <option value="6">请选择咨询类型</option>
+                                            <option value="7">买家特殊要求</option>
+                                            <option value="8">物流速度</option>
+                                            <option value="9">发票问题</option>
+                                            <option value="10">团购事宜</option>
+                                            <option value="11">汇款到账情况</option>
+                                            <option value="12">用户建议</option>
+                                            <option value="13">售后服务政策</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>咨询内容：</th>
+                                    <td>
+                                        <textarea name="" id="" cols="50" rows="20" class="text"></textarea>
+                                        <p>每条最多填写1000个字</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>您的邮箱：</th>
+                                    <td>
+                                        <input type="email" class="email">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>&nbsp;</th>
+                                    <td>
+                                        <div class="submit">提交</div><span class="tishi"></span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- 商品咨询 结束 -->
+                    <!-- 物流配送 开始 -->
+                    <div class="logistics">
+                        <div class="distribution">
+                            <br>
+                            <br>
+                            <p>
+                                配送方式：邮乐EMS快递及其他快递
+                            </p>
+                            <p>
+                                配送范围：覆盖中国大陆地区（暂不含港、澳、台及海外地区）
+                            </p>
+                            <table>
+                                <tr>
+                                    <th class="table-top">邮政EMS配送参考(从
+                                        <span class="address">江苏省南通市</span>寄出至)
+                                    </th>
+                                    <th>物流运送时间</th>
+                                </tr>
+                                <tr>
+                                    <td>上海 江苏 浙江 安徽 </td>
+                                    <td>1-3天</td>
+                                </tr>
+                                <tr>
+                                    <td>北京 天津 河北 山西 辽宁 福建 江西 山东 河南 湖北 湖南 广东 陕西</td>
+                                    <td>2-4天</td>
+                                </tr>
+                                <tr>
+                                    <td>内蒙古 吉林 黑龙江 广西 海南 四川 重庆 贵州 甘肃</td>
+                                    <td>3-5天</td>
+                                </tr>
+                                <tr>
+                                    <td>云南 青海 宁夏</td>
+                                    <td>4-6天</td>
+                                </tr>
+                                <tr>
+                                    <td>西藏 新疆 </td>
+                                    <td>5-7天</td>
+                                </tr>
+                            </table>
+                            <p class="sty">按国家邮政规定，液体类及粉末类、含锂电池的产品一律按陆运方式运输配送。实际到货时间可能会延误。</p>
+                            <p class="sty">如遇自然灾害、交通管制等不可抗力或特殊情况，配送时间将会有所延误。</p>
+
+                        </div>
+                        <div class="statement">
+                            <div class="pldge">
+                                <h3>声明与提醒：</h3>
+                                <p>1、邮乐网是第三方服务交易平台，不是商品的销售方，邮乐网不提供任何形式的保证。</p>
+                                <p>2、本商品销售页面上展示的所有信息，包括但不限于商品标题、详情、参数、计量单位、价格及宣传广告等，均由商家自行提供，其商品质量及商品相关合法性、真实性和准确性等所有涉及商品销售事宜由商家负责。用户如有任何疑问，请与商家联系，相关发票及售后服务均由商家提供。</p>
+                                <p>3、价格说明：</p>
+                                <p>
+                                    <b>划线价格：</b>
+                                    指商品专柜价、吊牌价、指导价、正品零售价或该商品曾经展示过的销售价等，并非商品的原价， 仅供您参考。
+                                </p>
+                                <p>
+                                    <b>为划线价格：</b>
+                                    指商品在邮乐上的销售价格，但是具体的成交价格可能会因使用优惠券、积分等发生变化，最 终以订单结算页价格为准。
+                                </p>
+                                <p>4、商家延迟发货/商家单方面取消订单说明：</p>
+                                <p>商家的发货时间，以快递公司系统内记录的时间为准。延迟发货的，商家需赔付消费者订单金额20%，最低20元，最高不超过100元的邮乐无门槛优惠券：</p>
+                                <p>（1）消费者下单成功后24小时内，商家未将消费者订购商品的快递单号上传至系统（以邮乐系统内记录的时间为准）。</p>
+                                <p>（2）定制、预售及其他特殊情形等另行约定时间的商品，实际商家未按照约定时间发货。</p>
+                                <p>（3）商家自主取消订单的。</p>
+                                <p>（4）同一用户在10日内对同一商品多次下单的，仅赔付一次。</p>
+                                <p>同一用户的判定规则：相同的用户帐号ID</p>
+                                <p>同一商品的判定规则：相同的商品ID</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 物流配送 结束 -->
+                </div>
+                <!-- 看过该商品的顾客还看过那些商品轮播动画 -->
+                <div class="also">
+                    <div class="other-buy">
+                        <h3>购买此商品的顾客还购买了</h3>
+                        <div class="other-buy-content">
+                            <div class="btn-left"></div>
+                            <div class="btn-right"></div>
+                            <div class="location">
+                                <ul class="big-box clearfix">
+                                    <li class="small">
+                                        <ul class="clearfix ul-box">
+                                            <li class="z1">
+                                                <a href="##" rel="noopener noreferrer" title="【自提商品 】甲森 竹浆卫生纸670g（仅限焦作地区积分兑换）">
+                                                    <img src="images/particulars/506317321d444b3b_p799x795.png"
+                                                        alt="【自提商品 】甲森 竹浆卫生纸670g（仅限焦作地区积分兑换）">
+                                                    <span class="itemname">【自提商品 】甲森 竹浆卫生纸670g（仅限焦作地区积分兑换）</span>
+                                                </a>
+                                                <p class="price">
+                                                    <span class="main">￥<i>18.00</i></span>
+                                                    <del>￥0.00</del>
+                                                </p>
+                                            </li>
+                                            <li class="z1">
+                                                <a href="##" rel="noopener noreferrer" title="【安阳邮乐馆】亮鲸 净白去渍洗衣粉1018g">
+                                                    <img src="images/particulars/554f98c8f4ff4298_p450x450.png"
+                                                        alt="【安阳邮乐馆】亮鲸 净白去渍洗衣粉1018g">
+                                                    <span class="itemname">【安阳邮乐馆】亮鲸 净白去渍洗衣粉1018g</span>
+                                                </a>
+                                                <p class="price">
+                                                    <span class="main">￥<i>10.00</i></span>
+                                                    <del>￥19.90</del>
+                                                </p>
+                                            </li>
+                                            <li class="z1">
+                                                <a href="##" rel="noopener noreferrer" title="勿相忘 卫生纸巾4层妇婴卷纸家用42卷 42JZ2900G">
+                                                    <img src="images/particulars/a5bc936c30877b1e_p750x750_sl.jpg"
+                                                        alt="勿相忘 卫生纸巾4层妇婴卷纸家用42卷 42JZ2900G">
+                                                    <span class="itemname">勿相忘 卫生纸巾4层妇婴卷纸家用42卷 42JZ2900G</span>
+                                                </a>
+                                                <p class="price">
+                                                    <span class="main">￥<i>55.00</i></span>
+                                                    <del>￥55.00</del>
+                                                </p>
+                                            </li>
+                                            <li class="z1">
+                                                <a href="##" rel="noopener noreferrer" title="万年贡 蟹田丝苗米5kg南方长粒大米香软晚籼米黏米10斤">
+                                                    <img src="images/particulars/30af44e1fd5164f9_p800x800_sl.jpg"
+                                                        alt="万年贡 蟹田丝苗米5kg南方长粒大米香软晚籼米黏米10斤">
+                                                    <span class="itemname">万年贡 蟹田丝苗米5kg南方长粒大米香软晚籼米黏米10斤</span>
+                                                </a>
+                                                <p class="price">
+                                                    <span class="main">￥<i>49.00</i></span>
+                                                    <del>￥59.00</del>
+                                                </p>
+                                            </li>
+                                            <li class="z1">
+                                                <a href="##" rel="noopener noreferrer" title="【常德积分商城】清风180抽2层软抽【限站点自提】">
+                                                    <img src="images/particulars/1496d2bbca78091a_p825x543_sl.jpg"
+                                                        alt="【常德积分商城】清风180抽2层软抽【限站点自提】">
+                                                    <span class="itemname">【常德积分商城】清风180抽2层软抽【限站点自提】</span>
+                                                </a>
+                                                <p class="price">
+                                                    <span class="main">￥<i>6.50</i></span>
+                                                    <del>￥0.00</del>
+                                                </p>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="small">
+                                        <ul class="clearfix ul-box">
+                                            <li class="z1">
+                                                <a href="##" rel="noopener noreferrer" title="邮滋味米多奇烤馍片烤馍丁散装3袋">
+                                                    <img src="images/particulars/b5ea56639123dbf6_p467x450_sl.jpg"
+                                                        alt="邮滋味米多奇烤馍片烤馍丁散装3袋">
+                                                    <span class="itemname">邮滋味米多奇烤馍片烤馍丁散装3袋</span>
+                                                </a>
+                                                <p class="price">
+                                                    <span class="main">￥<i>3.90</i></span>
+                                                    <del>￥6.00</del>
+                                                </p>
+                                            </li>
+                                            <li class="z1">
+                                                <a href="##" rel="noopener noreferrer" title="【限信阳地区积分兑换专用，不对外销售】淮滨 金龙鱼家庭通用小麦粉 5KG">
+                                                    <img src="images/particulars/0429ab87eb5624de_p450x450_sl.jpg"
+                                                        alt="【限信阳地区积分兑换专用，不对外销售】淮滨 金龙鱼家庭通用小麦粉 5KG">
+                                                    <span class="itemname">【限信阳地区积分兑换专用，不对外销售】淮滨 金龙鱼家庭通用小麦粉 5KG</span>
+                                                </a>
+                                                <p class="price">
+                                                    <span class="main">￥<i>34.50</i></span>
+                                                    <del>￥69.00</del>
+                                                </p>
+                                            </li>
+                                            <li class="z1">
+                                                <a href="##" rel="noopener noreferrer" title="【自营商品】金龙鱼 精练一级大豆油 积分兑换 济源">
+                                                    <img src="images/particulars/a8674e1c9281adf8_p750x512_sl.jpg"
+                                                        alt="【自营商品】金龙鱼 精练一级大豆油 积分兑换 济源">
+                                                    <span class="itemname">【自营商品】金龙鱼 精练一级大豆油 积分兑换 济源</span>
+                                                </a>
+                                                <p class="price">
+                                                    <span class="main">￥<i>48.00</i></span>
+                                                    <del>￥55.00</del>
+                                                </p>
+                                            </li>
+                                            <li class="z1">
+                                                <a href="##" rel="noopener noreferrer" title="【预售】农家自产 韶关仁化皇帝柑  3斤装 仅限优惠券兑换 限韶关地区">
+                                                    <img src="images/particulars/4fe8b42492a89ee4_p1440x1080_sl.jpg"
+                                                        alt="【预售】农家自产 韶关仁化皇帝柑  3斤装 仅限优惠券兑换 限韶关地区">
+                                                    <span class="itemname">【预售】农家自产 韶关仁化皇帝柑 3斤装 仅限优惠券兑换 限韶关地区</span>
+                                                </a>
+                                                <p class="price">
+                                                    <span class="main">￥<i>38.00</i></span>
+                                                    <del>￥0.00</del>
+                                                </p>
+                                            </li>
+                                            <li class="z1">
+                                                <a href="##" rel="noopener noreferrer" title="健发花生调和油（4.5L）【滑县勿拍！滑县勿拍！！！】">
+                                                    <img src="images/particulars/6492074bb15eccfc_p450x450_sl.jpg"
+                                                        alt="健发花生调和油（4.5L）【滑县勿拍！滑县勿拍！！！】">
+                                                    <span class="itemname">健发花生调和油（4.5L）【滑县勿拍！滑县勿拍！！！】</span>
+                                                </a>
+                                                <p class="price">
+                                                    <span class="main">￥<i>55.00</i></span>
+                                                    <del>￥59.00</del>
+                                                </p>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="small">
+                                        <ul class="clearfix ul-box">
+                                            <li class="z1">
+                                                <a href="##" rel="noopener noreferrer" title="【岳阳馆】泰香丝苖大米5kg">
+                                                    <img src="images/particulars/bf64a77ab50f54e4_p1440x1920_sl.jpg"
+                                                        alt="【岳阳馆】泰香丝苖大米5kg">
+                                                    <span class="itemname">【岳阳馆】泰香丝苖大米5kg</span>
+                                                </a>
+                                                <p class="price">
+                                                    <span class="main">￥<i>48.00</i></span>
+                                                    <del>￥68.00</del>
+                                                </p>
+                                            </li>
+                                            <li class="z1">
+                                                <a href="##" rel="noopener noreferrer" title="【年货节】  满10.1减10  宜宾邮政 江安中坝脐橙2.5公斤左右  全国包邮（偏远地区除外）。">
+                                                    <img src="images/particulars/416e4d02a2454593_p794x461.png"
+                                                        alt="【年货节】  满10.1减10  宜宾邮政 江安中坝脐橙2.5公斤左右  全国包邮（偏远地区除外）。">
+                                                    <span class="itemname">【年货节】 满10.1减10 宜宾邮政 江安中坝脐橙2.5公斤左右
+                                                        全国包邮（偏远地区除外）。</span>
+                                                </a>
+                                                <p class="price">
+                                                    <span class="main">￥<i>16.80</i></span>
+                                                    <del>￥36.00</del>
+                                                </p>
+                                            </li>
+                                            <li class="z1">
+                                                <a href="##" rel="noopener noreferrer" title="滋源无硅油生姜洗发水 535ml">
+                                                    <img src="images/particulars/442abbff786cfa3f_p450x450_sl.jpg"
+                                                        alt="滋源无硅油生姜洗发水 535ml">
+                                                    <span class="itemname">滋源无硅油生姜洗发水 535ml</span>
+                                                </a>
+                                                <p class="price">
+                                                    <span class="main">￥<i>200.00</i></span>
+                                                    <del>￥200.00</del>
+                                                </p>
+                                            </li>
+                                            <li class="z1">
+                                                <a href="##" rel="noopener noreferrer" title="助农扶贫  勐腊县倮德村委会黄竹林村 贫困户自种香芋 4斤包邮 1月10日发货">
+                                                    <img src="images/particulars/4b4edca4746b7be9_p1080x1905_sl.jpg"
+                                                        alt="助农扶贫  勐腊县倮德村委会黄竹林村 贫困户自种香芋 4斤包邮 1月10日发货">
+                                                    <span class="itemname">助农扶贫 勐腊县倮德村委会黄竹林村 贫困户自种香芋 4斤包邮 1月10日发货</span>
+                                                </a>
+                                                <p class="price">
+                                                    <span class="main">￥<i>19.00</i></span>
+                                                    <del>￥35.00</del>
+                                                </p>
+                                            </li>
+                                            <li class="z1">
+                                                <a href="##" rel="noopener noreferrer" title="【邮乐安阳馆】健发花生调和油4L">
+                                                    <img src="images/particulars/cfc2d6ef6a451086_p1600x1600_sl.jpg"
+                                                        alt="【邮乐安阳馆】健发花生调和油4L">
+                                                    <span class="itemname">【邮乐安阳馆】健发花生调和油4L</span>
+                                                </a>
+                                                <p class="price">
+                                                    <span class="main">￥<i>48.00</i></span>
+                                                    <del>￥50.00</del>
+                                                </p>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="small">
+                                        <ul class="clearfix ul-box">
+                                            <li class="z1">
+                                                <a href="##" rel="noopener noreferrer" title="加厚垃圾袋30只中号50x60 办公室家用点断垃圾袋【邮乐团购专用】">
+                                                    <img src="images/particulars/4c4295b8359f4711_p678x678_sl.jpg"
+                                                        alt="加厚垃圾袋30只中号50x60 办公室家用点断垃圾袋【邮乐团购专用】">
+                                                    <span class="itemname">加厚垃圾袋30只中号50x60 办公室家用点断垃圾袋【邮乐团购专用】</span>
+                                                </a>
+                                                <p class="price">
+                                                    <span class="main">￥<i>3.40</i></span>
+                                                    <del>￥5.60</del>
+                                                </p>
+                                            </li>
+                                            <li class="z1">
+                                                <a href="##" rel="noopener noreferrer" title="原阳珍呈大米 5KG   (仅限周口邮储客户金融积分兑换使用）网点自提，不包邮">
+                                                    <img src="images/particulars/42bd95cdaafe25f4_p450x450_sl.jpg"
+                                                        alt="原阳珍呈大米 5KG   (仅限周口邮储客户金融积分兑换使用）网点自提，不包邮">
+                                                    <span class="itemname">原阳珍呈大米 5KG (仅限周口邮储客户金融积分兑换使用）网点自提，不包邮</span>
+                                                </a>
+                                                <p class="price">
+                                                    <span class="main">￥<i>32.00</i></span>
+                                                    <del>￥38.00</del>
+                                                </p>
+                                            </li>
+                                            <li class="z1">
+                                                <a href="##" rel="noopener noreferrer" title="清风抽纸1包">
+                                                    <img src="images/particulars/afc3fef214f46d3b_p450x450_sl.jpg"
+                                                        alt="清风抽纸1包">
+                                                    <span class="itemname">清风抽纸1包</span>
+                                                </a>
+                                                <p class="price">
+                                                    <span class="main">￥<i>1.00</i></span>
+                                                    <del>￥0.00</del>
+                                                </p>
+                                            </li>
+                                            <li class="z1">
+                                                <a href="##" rel="noopener noreferrer" title="富光 256-320 双层玻璃保温水杯 320ml">
+                                                    <img src="images/particulars/71f00c44f7873d20_p800x800_sl.jpg"
+                                                        alt="富光 256-320 双层玻璃保温水杯 320ml">
+                                                    <span class="itemname">富光 256-320 双层玻璃保温水杯 320ml</span>
+                                                </a>
+                                                <p class="price">
+                                                    <span class="main">￥<i>39.90</i></span>
+                                                    <del>￥56.00</del>
+                                                </p>
+                                            </li>
+                                            <li class="z1">
+                                                <a href="##" rel="noopener noreferrer" title="冰希黎 真爱女士香水50ML">
+                                                    <img src="images/particulars/76a61e0c4f69962c_p800x800_sl.jpg"
+                                                        alt="冰希黎 真爱女士香水50ML">
+                                                    <span class="itemname">冰希黎 真爱女士香水50ML</span>
+                                                </a>
+                                                <p class="price">
+                                                    <span class="main">￥<i>108.00</i></span>
+                                                    <del>￥138.00</del>
+                                                </p>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="also-look">
+                    <div class="other-buy">
+                        <h3>购买此商品的顾客还查看了</h3>
+                        <div class="other-buy-content">
+                            <div class="btn-left"></div>
+                            <div class="btn-right"></div>
+                            <div class="location">
+                                <ul class="big-box clearfix">
+                                    <li class="small">
+                                        <ul class="clearfix ul-box">
+                                            <li class="z1">
+                                                <a href="##" rel="noopener noreferrer" title="【岳阳馆】泰香丝苖大米5kg">
+                                                    <img src="images/particulars/bf64a77ab50f54e4_p1440x1920_sl.jpg"
+                                                        alt="【岳阳馆】泰香丝苖大米5kg">
+                                                    <span class="itemname">【岳阳馆】泰香丝苖大米5kg</span>
+                                                </a>
+                                                <p class="price">
+                                                    <span class="main">￥<i>48.00</i></span>
+                                                    <del>￥68.00</del>
+                                                </p>
+                                            </li>
+                                            <li class="z1">
+                                                <a href="##" rel="noopener noreferrer" title="【年货节】  满10.1减10  宜宾邮政 江安中坝脐橙2.5公斤左右  全国包邮（偏远地区除外）。">
+                                                    <img src="images/particulars/416e4d02a2454593_p794x461.png"
+                                                        alt="【年货节】  满10.1减10  宜宾邮政 江安中坝脐橙2.5公斤左右  全国包邮（偏远地区除外）。">
+                                                    <span class="itemname">【年货节】 满10.1减10 宜宾邮政 江安中坝脐橙2.5公斤左右
+                                                        全国包邮（偏远地区除外）。</span>
+                                                </a>
+                                                <p class="price">
+                                                    <span class="main">￥<i>16.80</i></span>
+                                                    <del>￥36.00</del>
+                                                </p>
+                                            </li>
+                                            <li class="z1">
+                                                <a href="##" rel="noopener noreferrer" title="滋源无硅油生姜洗发水 535ml">
+                                                    <img src="images/particulars/442abbff786cfa3f_p450x450_sl.jpg"
+                                                        alt="滋源无硅油生姜洗发水 535ml">
+                                                    <span class="itemname">滋源无硅油生姜洗发水 535ml</span>
+                                                </a>
+                                                <p class="price">
+                                                    <span class="main">￥<i>200.00</i></span>
+                                                    <del>￥200.00</del>
+                                                </p>
+                                            </li>
+                                            <li class="z1">
+                                                <a href="##" rel="noopener noreferrer" title="助农扶贫  勐腊县倮德村委会黄竹林村 贫困户自种香芋 4斤包邮 1月10日发货">
+                                                    <img src="images/particulars/4b4edca4746b7be9_p1080x1905_sl.jpg"
+                                                        alt="助农扶贫  勐腊县倮德村委会黄竹林村 贫困户自种香芋 4斤包邮 1月10日发货">
+                                                    <span class="itemname">助农扶贫 勐腊县倮德村委会黄竹林村 贫困户自种香芋 4斤包邮 1月10日发货</span>
+                                                </a>
+                                                <p class="price">
+                                                    <span class="main">￥<i>19.00</i></span>
+                                                    <del>￥35.00</del>
+                                                </p>
+                                            </li>
+                                            <li class="z1">
+                                                <a href="##" rel="noopener noreferrer" title="【邮乐安阳馆】健发花生调和油4L">
+                                                    <img src="images/particulars/cfc2d6ef6a451086_p1600x1600_sl.jpg"
+                                                        alt="【邮乐安阳馆】健发花生调和油4L">
+                                                    <span class="itemname">【邮乐安阳馆】健发花生调和油4L</span>
+                                                </a>
+                                                <p class="price">
+                                                    <span class="main">￥<i>48.00</i></span>
+                                                    <del>￥50.00</del>
+                                                </p>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="small">
+                                        <ul class="clearfix ul-box">
+                                            <li class="z1">
+                                                <a href="##" rel="noopener noreferrer" title="【自提商品 】甲森 竹浆卫生纸670g（仅限焦作地区积分兑换）">
+                                                    <img src="images/particulars/506317321d444b3b_p799x795.png"
+                                                        alt="【自提商品 】甲森 竹浆卫生纸670g（仅限焦作地区积分兑换）">
+                                                    <span class="itemname">【自提商品 】甲森 竹浆卫生纸670g（仅限焦作地区积分兑换）</span>
+                                                </a>
+                                                <p class="price">
+                                                    <span class="main">￥<i>18.00</i></span>
+                                                    <del>￥0.00</del>
+                                                </p>
+                                            </li>
+                                            <li class="z1">
+                                                <a href="##" rel="noopener noreferrer" title="【安阳邮乐馆】亮鲸 净白去渍洗衣粉1018g">
+                                                    <img src="images/particulars/554f98c8f4ff4298_p450x450.png"
+                                                        alt="【安阳邮乐馆】亮鲸 净白去渍洗衣粉1018g">
+                                                    <span class="itemname">【安阳邮乐馆】亮鲸 净白去渍洗衣粉1018g</span>
+                                                </a>
+                                                <p class="price">
+                                                    <span class="main">￥<i>10.00</i></span>
+                                                    <del>￥19.90</del>
+                                                </p>
+                                            </li>
+                                            <li class="z1">
+                                                <a href="##" rel="noopener noreferrer" title="勿相忘 卫生纸巾4层妇婴卷纸家用42卷 42JZ2900G">
+                                                    <img src="images/particulars/a5bc936c30877b1e_p750x750_sl.jpg"
+                                                        alt="勿相忘 卫生纸巾4层妇婴卷纸家用42卷 42JZ2900G">
+                                                    <span class="itemname">勿相忘 卫生纸巾4层妇婴卷纸家用42卷 42JZ2900G</span>
+                                                </a>
+                                                <p class="price">
+                                                    <span class="main">￥<i>55.00</i></span>
+                                                    <del>￥55.00</del>
+                                                </p>
+                                            </li>
+                                            <li class="z1">
+                                                <a href="##" rel="noopener noreferrer" title="万年贡 蟹田丝苗米5kg南方长粒大米香软晚籼米黏米10斤">
+                                                    <img src="images/particulars/30af44e1fd5164f9_p800x800_sl.jpg"
+                                                        alt="万年贡 蟹田丝苗米5kg南方长粒大米香软晚籼米黏米10斤">
+                                                    <span class="itemname">万年贡 蟹田丝苗米5kg南方长粒大米香软晚籼米黏米10斤</span>
+                                                </a>
+                                                <p class="price">
+                                                    <span class="main">￥<i>49.00</i></span>
+                                                    <del>￥59.00</del>
+                                                </p>
+                                            </li>
+                                            <li class="z1">
+                                                <a href="##" rel="noopener noreferrer" title="【常德积分商城】清风180抽2层软抽【限站点自提】">
+                                                    <img src="images/particulars/1496d2bbca78091a_p825x543_sl.jpg"
+                                                        alt="【常德积分商城】清风180抽2层软抽【限站点自提】">
+                                                    <span class="itemname">【常德积分商城】清风180抽2层软抽【限站点自提】</span>
+                                                </a>
+                                                <p class="price">
+                                                    <span class="main">￥<i>6.50</i></span>
+                                                    <del>￥0.00</del>
+                                                </p>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="small">
+                                        <ul class="clearfix ul-box">
+                                            <li class="z1">
+                                                <a href="##" rel="noopener noreferrer" title="邮滋味米多奇烤馍片烤馍丁散装3袋">
+                                                    <img src="images/particulars/b5ea56639123dbf6_p467x450_sl.jpg"
+                                                        alt="邮滋味米多奇烤馍片烤馍丁散装3袋">
+                                                    <span class="itemname">邮滋味米多奇烤馍片烤馍丁散装3袋</span>
+                                                </a>
+                                                <p class="price">
+                                                    <span class="main">￥<i>3.90</i></span>
+                                                    <del>￥6.00</del>
+                                                </p>
+                                            </li>
+                                            <li class="z1">
+                                                <a href="##" rel="noopener noreferrer" title="【限信阳地区积分兑换专用，不对外销售】淮滨 金龙鱼家庭通用小麦粉 5KG">
+                                                    <img src="images/particulars/0429ab87eb5624de_p450x450_sl.jpg"
+                                                        alt="【限信阳地区积分兑换专用，不对外销售】淮滨 金龙鱼家庭通用小麦粉 5KG">
+                                                    <span class="itemname">【限信阳地区积分兑换专用，不对外销售】淮滨 金龙鱼家庭通用小麦粉 5KG</span>
+                                                </a>
+                                                <p class="price">
+                                                    <span class="main">￥<i>34.50</i></span>
+                                                    <del>￥69.00</del>
+                                                </p>
+                                            </li>
+                                            <li class="z1">
+                                                <a href="##" rel="noopener noreferrer" title="【自营商品】金龙鱼 精练一级大豆油 积分兑换 济源">
+                                                    <img src="images/particulars/a8674e1c9281adf8_p750x512_sl.jpg"
+                                                        alt="【自营商品】金龙鱼 精练一级大豆油 积分兑换 济源">
+                                                    <span class="itemname">【自营商品】金龙鱼 精练一级大豆油 积分兑换 济源</span>
+                                                </a>
+                                                <p class="price">
+                                                    <span class="main">￥<i>48.00</i></span>
+                                                    <del>￥55.00</del>
+                                                </p>
+                                            </li>
+                                            <li class="z1">
+                                                <a href="##" rel="noopener noreferrer" title="【预售】农家自产 韶关仁化皇帝柑  3斤装 仅限优惠券兑换 限韶关地区">
+                                                    <img src="images/particulars/4fe8b42492a89ee4_p1440x1080_sl.jpg"
+                                                        alt="【预售】农家自产 韶关仁化皇帝柑  3斤装 仅限优惠券兑换 限韶关地区">
+                                                    <span class="itemname">【预售】农家自产 韶关仁化皇帝柑 3斤装 仅限优惠券兑换 限韶关地区</span>
+                                                </a>
+                                                <p class="price">
+                                                    <span class="main">￥<i>38.00</i></span>
+                                                    <del>￥0.00</del>
+                                                </p>
+                                            </li>
+                                            <li class="z1">
+                                                <a href="##" rel="noopener noreferrer" title="健发花生调和油（4.5L）【滑县勿拍！滑县勿拍！！！】">
+                                                    <img src="images/particulars/6492074bb15eccfc_p450x450_sl.jpg"
+                                                        alt="健发花生调和油（4.5L）【滑县勿拍！滑县勿拍！！！】">
+                                                    <span class="itemname">健发花生调和油（4.5L）【滑县勿拍！滑县勿拍！！！】</span>
+                                                </a>
+                                                <p class="price">
+                                                    <span class="main">￥<i>55.00</i></span>
+                                                    <del>￥59.00</del>
+                                                </p>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="small">
+                                        <ul class="clearfix ul-box">
+                                            <li class="z1">
+                                                <a href="##" rel="noopener noreferrer" title="加厚垃圾袋30只中号50x60 办公室家用点断垃圾袋【邮乐团购专用】">
+                                                    <img src="images/particulars/4c4295b8359f4711_p678x678_sl.jpg"
+                                                        alt="加厚垃圾袋30只中号50x60 办公室家用点断垃圾袋【邮乐团购专用】">
+                                                    <span class="itemname">加厚垃圾袋30只中号50x60 办公室家用点断垃圾袋【邮乐团购专用】</span>
+                                                </a>
+                                                <p class="price">
+                                                    <span class="main">￥<i>3.40</i></span>
+                                                    <del>￥5.60</del>
+                                                </p>
+                                            </li>
+                                            <li class="z1">
+                                                <a href="##" rel="noopener noreferrer" title="原阳珍呈大米 5KG   (仅限周口邮储客户金融积分兑换使用）网点自提，不包邮">
+                                                    <img src="images/particulars/42bd95cdaafe25f4_p450x450_sl.jpg"
+                                                        alt="原阳珍呈大米 5KG   (仅限周口邮储客户金融积分兑换使用）网点自提，不包邮">
+                                                    <span class="itemname">原阳珍呈大米 5KG (仅限周口邮储客户金融积分兑换使用）网点自提，不包邮</span>
+                                                </a>
+                                                <p class="price">
+                                                    <span class="main">￥<i>32.00</i></span>
+                                                    <del>￥38.00</del>
+                                                </p>
+                                            </li>
+                                            <li class="z1">
+                                                <a href="##" rel="noopener noreferrer" title="清风抽纸1包">
+                                                    <img src="images/particulars/afc3fef214f46d3b_p450x450_sl.jpg"
+                                                        alt="清风抽纸1包">
+                                                    <span class="itemname">清风抽纸1包</span>
+                                                </a>
+                                                <p class="price">
+                                                    <span class="main">￥<i>1.00</i></span>
+                                                    <del>￥0.00</del>
+                                                </p>
+                                            </li>
+                                            <li class="z1">
+                                                <a href="##" rel="noopener noreferrer" title="富光 256-320 双层玻璃保温水杯 320ml">
+                                                    <img src="images/particulars/71f00c44f7873d20_p800x800_sl.jpg"
+                                                        alt="富光 256-320 双层玻璃保温水杯 320ml">
+                                                    <span class="itemname">富光 256-320 双层玻璃保温水杯 320ml</span>
+                                                </a>
+                                                <p class="price">
+                                                    <span class="main">￥<i>39.90</i></span>
+                                                    <del>￥56.00</del>
+                                                </p>
+                                            </li>
+                                            <li class="z1">
+                                                <a href="##" rel="noopener noreferrer" title="冰希黎 真爱女士香水50ML">
+                                                    <img src="images/particulars/76a61e0c4f69962c_p800x800_sl.jpg"
+                                                        alt="冰希黎 真爱女士香水50ML">
+                                                    <span class="itemname">冰希黎 真爱女士香水50ML</span>
+                                                </a>
+                                                <p class="price">
+                                                    <span class="main">￥<i>108.00</i></span>
+                                                    <del>￥138.00</del>
+                                                </p>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 底部 -->
+    <div class="floor">
+        <div class="footer-banner">
+            <a href="#" class="banner1" title="中国邮政"></a>
+            <a href="#" class="banner2" title="携手呈现"></a>
+            <a href="#" class="banner3" title="品质保障 优选邮乐"></a>
+            <a href="#" class="banner4" title="覆盖城乡 安全送达"></a>
+        </div>
+        <div class="footer-helper">
+            <!-- 购物助手链接 -->
+            <ul class="clearfix">
+                <li class="footer-left">
+                    <h4>购物指南</h4>
+                    <div class="href-box clearfix">
+                        <a href="#">购物流程</a>
+                        <a href="#">使用优惠券</a>
+                        <a href="#">积分规则</a>
+                        <a href="#">如何找回密码</a>
+                        <a href="#">订单多包裹配送</a>
+                        <a href="#">在线客服(邮乐通)</a>
+                        <a href="#">品牌大全</a>
+                    </div>
+                </li>
+                <li>
+                    <h4>支付帮助</h4>
+                    <div class="href-box clearfix">
+                        <a href="#">邮乐卡支付</a>
+                        <a href="#">网上银行支付</a>
+                        <a href="#">邮储快捷支付</a>
+                        <a href="#">邮乐快捷支付协议</a>
+                        <a href="#">发票说明</a>
+                    </div>
+                </li>
+                <li>
+                    <h4>配送方式</h4>
+                    <div class="href-box clearfix">
+                        <a href="#">海外购物配送</a>
+                        <a href="#">签收拒收规则</a>
+                        <a href="#">配送时间/范围/运费</a>
+                    </div>
+                </li>
+                <li>
+                    <h4>售后服务</h4>
+                    <div class="href-box clearfix">
+                        <a href="#">退换货规则</a>
+                        <a href="#">退款说明</a>
+                        <a href="#">联系客服</a>
+                        <a href="#">退换货流程</a>
+                        <a href="#">退换货运费补偿标准</a>
+                        <a href="#">纠纷申诉处理规则说明</a>
+                    </div>
+                </li>
+                <li>
+                    <h4>特色服务</h4>
+                    <div class="href-box clearfix">
+                        <a href="#">邮掌柜</a>
+                        <a href="#">邮乐海外站</a>
+                        <a href="#">手机充值</a>
+                    </div>
+                </li>
+                <li class="footer-right">
+                    <h4>关于邮乐</h4>
+                    <div class="href-box clearfix">
+                        <a href="#">邮乐简介</a>
+                        <a href="#">邮乐招商</a>
+                        <a href="#">商家入驻</a>
+                        <a href="#">商家中心</a>
+                        <a href="#">友情链接</a>
+                        <a href="#">用户协议</a>
+                        <a href="#">隐私权保护</a>
+                        <a href="#">网站地图</a>
+                    </div>
+                </li>
+
+            </ul>
+            <!-- 购物助手链接结束 -->
+        </div>
+        <div class="footer-license">
+            <span>出版物经营许可证编号：沪零字第L6687号</span>
+            <span>酒类商品零售许可证：0318030103000002</span>
+            <span>食品流通许可证：SP3101151560900563</span>
+            <span>统一社会信用代码:913100006916203638</span>
+        </div>
+        <div class="copyright">沪ICP备:13037728 号 Copyright 2009-2019, 版权所有上海邮乐网络技术有限公司 ULE.COM</div>
+        <div class="footer-icon clearfix">
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+        </div>
+    </div>
+    <!-- 底部结束 -->
+    <!-- 侧边栏 开始 -->
+    <div class="sidebar">
+        <div class="sidebar-top rt">
+            <div class="btn">
+                <div class="all-class-btn">
+                    <span class="tips">商品分类</span>
+                    <div class="all-class-list lt">
+                        <h2>商品分类</h2>
+                        <div class="all-class-list-box">
+                            <ul>
+                                <li>
+                                    <h4>
+                                        <span>美妆洗护</span>
+                                        <a href="#" target="_blank" class="more">
+                                            <i class="fa fa-chevron-circle-right"></i>
+                                        </a>
+                                    </h4>
+                                    <p class="clearfix">
+                                        <a href="#" target="_blank">面部护肤</a>
+                                        <a href="#" target="_blank">时尚彩妆</a>
+                                        <a href="#" target="_blank">美发护发</a>
+                                        <a href="#" target="_blank">沐浴用品</a>
+                                        <a href="#" target="_blank">女性护理</a>
+                                        <a href="#" target="_blank">男士护理</a>
+                                        <a href="#" target="_blank">香水</a>
+                                    </p>
+                                </li>
+                                <li>
+                                    <h4>
+                                        <span>女装、饰品</span>
+                                        <a href="#" target="_blank" class="more">
+                                            <i class="fa fa-chevron-circle-right"></i>
+                                        </a>
+                                    </h4>
+                                    <p class="clearfix">
+                                        <a href="#" target="_blank">帽子</a>
+                                        <a href="#" target="_blank">项链</a>
+                                        <a href="#" target="_blank">戒指</a>
+                                        <a href="#" target="_blank">手表</a>
+                                        <a href="#" target="_blank">耳饰</a>
+                                        <a href="#" target="_blank">女士腰带</a>
+                                        <a href="#" target="_blank">太阳镜/眼镜框</a>
+                                    </p>
+                                </li>
+                                <li>
+                                    <h4>
+                                        <span>家居生活</span>
+                                        <a href="#" target="_blank" class="more">
+                                            <i class="fa fa-chevron-circle-right"></i>
+                                        </a>
+                                    </h4>
+                                    <p class="clearfix">
+                                        <a href="#" target="_blank">家纺日用</a>
+                                        <a href="#" target="_blank">床上用品</a>
+                                        <a href="#" target="_blank">家居用品</a>
+                                        <a href="#" target="_blank">收纳洗晒</a>
+                                        <a href="#" target="_blank">家装建材</a>
+                                        <a href="#" target="_blank">五金装潢</a>
+                                    </p>
+                                </li>
+                                <li>
+                                    <h4>
+                                        <span>汽车用品</span>
+                                        <a href="#" target="_blank" class="more">
+                                            <i class="fa fa-chevron-circle-right"></i>
+                                        </a>
+                                    </h4>
+                                    <p class="clearfix">
+                                        <a href="#" target="_blank">行车记录仪</a>
+                                        <a href="#" target="_blank">润滑油</a>
+                                        <a href="#" target="_blank">座垫/座套</a>
+                                        <a href="#" target="_blank">维修配件</a>
+                                        <a href="#" target="_blank">内饰</a>
+                                    </p>
+                                </li>
+                                <li>
+                                    <h4>
+                                        <span>特色美食</span>
+                                        <a href="#" target="_blank" class="more">
+                                            <i class="fa fa-chevron-circle-right"></i>
+                                        </a>
+                                    </h4>
+                                    <p class="clearfix">
+                                        <a href="#" target="_blank">休闲零食</a>
+                                        <a href="#" target="_blank">饮料冲调</a>
+                                        <a href="#" target="_blank">进口食品</a>
+                                        <a href="#" target="_blank">饮料/水/牛奶</a>
+                                        <a href="#" target="_blank">厨房调料/方便速食</a>
+                                    </p>
+                                </li>
+                                <li>
+                                    <h4>
+                                        <span>魅力男装</span>
+                                        <a href="#" target="_blank" class="more">
+                                            <i class="fa fa-chevron-circle-right"></i>
+                                        </a>
+                                    </h4>
+                                    <p class="clearfix">
+                                        <a href="#" target="_blank">T恤/POLO衫</a>
+                                        <a href="#" target="_blank">保暖内衣</a>
+                                        <a href="#" target="_blank">夹克/外套</a>
+                                        <a href="#" target="_blank">男士内裤</a>
+                                        <a href="#" target="_blank">休闲裤</a>
+                                        <a href="#" target="_blank">针织衫</a>
+                                        <a href="#" target="_blank">棉服</a>
+                                    </p>
+                                </li>
+                                <li>
+                                    <h4>
+                                        <span>厨卫清洁</span>
+                                        <a href="#" target="_blank" class="more">
+                                            <i class="fa fa-chevron-circle-right"></i>
+                                        </a>
+                                    </h4>
+                                    <p class="clearfix">
+                                        <a href="#" target="_blank">清洁剂</a>
+                                        <a href="#" target="_blank">清洁工具</a>
+                                        <a href="#" target="_blank">一次性用品</a>
+                                        <a href="#" target="_blank">生活用纸</a>
+                                        <a href="#" target="_blank">厨房用具</a>
+                                        <a href="#" target="_blank">锅具水壶</a>
+                                        <a href="#" target="_blank">浴室用品</a>
+                                    </p>
+                                </li>
+                                <li>
+                                    <h4>
+                                        <span>手机数码</span>
+                                        <a href="#" target="_blank" class="more">
+                                            <i class="fa fa-chevron-circle-right"></i>
+                                        </a>
+                                    </h4>
+                                    <p class="clearfix">
+                                        <a href="#" target="_blank">手机通讯</a>
+                                        <a href="#" target="_blank">手机配件</a>
+                                        <a href="#" target="_blank">摄影摄像</a>
+                                        <a href="#" target="_blank">数码配件</a>
+                                        <a href="#" target="_blank">数码影音</a>
+                                        <a href="#" target="_blank">智能设备</a>
+                                    </p>
+                                </li>
+                                <li>
+                                    <h4>
+                                        <span>箱包鞋帽</span>
+                                        <a href="#" target="_blank" class="more"
+                                            ">
+                                            <i class=" fa
+                                            fa-chevron-circle-right"></i>
+                                        </a>
+                                    </h4>
+                                    <p class="clearfix">
+                                        <a href="#" target="_blank">功能箱包</a>
+                                        <a href="#" target="_blank">时尚女包</a>
+                                        <a href="#" target="_blank">潮流女鞋</a>
+                                        <a href="#" target="_blank">流行男鞋</a>
+                                        <a href="#" target="_blank">精品男包</a>
+                                    </p>
+                                </li>
+                                <li>
+                                    <h4>
+                                        <span>电脑办公</span>
+                                        <a href="#" target="_blank" class="more">
+                                            <i class="fa fa-chevron-circle-right"></i>
+                                        </a>
+                                    </h4>
+                                    <p class="clearfix">
+                                        <a href="#" target="_blank">电脑整机</a>
+                                        <a href="#" target="_blank">电脑硬件</a>
+                                        <a href="#" target="_blank">外设产品</a>
+                                        <a href="#" target="_blank">网络设备</a>
+                                        <a href="#" target="_blank">游戏设备</a>
+                                        <a href="#" target="_blank">办公设备</a>
+                                        <a href="#" target="_blank">文具/耗材</a>
+                                    </p>
+                                </li>
+                                <li>
+                                    <h4><span>家用电器</span>
+                                        <a href="#" target="_blank" class="more">
+                                            <i class="fa fa-chevron-circle-right"></i>
+                                        </a>
+                                    </h4>
+                                    <p class="clearfix">
+                                        <a href="#" target="_blank">个人护理电器</a>
+                                        <a href="#" target="_blank">厨房电器</a>
+                                        <a href="#" target="_blank">生活电器</a>
+                                        <a href="#" target="_blank">大家电</a>
+                                    </p>
+                                </li>
+                                <li>
+                                    <h4>
+                                        <span>运动/户外/器械</span>
+                                        <a href="#" target="_blank" class="more">
+                                            <i class="fa fa-chevron-circle-right"></i>
+                                        </a>
+                                    </h4>
+                                    <p class="clearfix">
+                                        <a href="#" target="_blank">户外服饰</a>
+                                        <a href="#" target="_blank">户外包</a>
+                                        <a href="#" target="_blank">户外装备</a>
+                                        <a href="#" target="_blank">运动服饰</a>
+                                        <a href="#" target="_blank">运动鞋包</a>
+                                        <a href="#" target="_blank">运动休闲健身</a>
+                                        <a href="#" target="_blank">运动器材</a>
+                                    </p>
+                                </li>
+                                <li>
+                                    <h4>
+                                        <span>母婴玩具</span>
+                                        <a href="#" target="_blank" class="more">
+                                            <i class="fa fa-chevron-circle-right"></i>
+                                        </a>
+                                    </h4>
+                                    <p class="clearfix">
+                                        <a href="#" target="_blank">尿裤湿巾</a>
+                                        <a href="#" target="_blank">玩具书籍</a>
+                                        <a href="#" target="_blank">哺喂用品</a>
+                                        <a href="#" target="_blank">妈妈用品</a>
+                                        <a href="#" target="_blank">宝宝服饰</a>
+                                        <a href="#" target="_blank">儿童服饰</a>
+                                        <a href="#" target="_blank">寝室家具</a>
+                                    </p>
+                                </li>
+                                <li>
+                                    <h4>
+                                        <span>卡券</span>
+                                        <a href="#" target="_blank" class="more">
+                                            <i class="fa fa-chevron-circle-right"></i>
+                                        </a>
+                                    </h4>
+                                    <p class="clearfix">
+                                        <a href="#" target="_blank">纪念收藏</a>
+                                        <a href="#" target="_blank">特色礼品</a>
+                                        <a href="#" target="_blank">旅游门票</a>
+                                        <a href="#" target="_blank">消费卡券/票券</a>
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="qrcode">
+                <div class="qrcode-btn">
+                    <span class="qrcode-pic"></span>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar-middle rt">
+            <div class="btn btn2">
+                <div class="myld-btn">
+                    <span class="tips">我的邮乐</span>
+                    <div class="myld ">
+                        <h3>我的邮乐</h3>
+                        <div class="user-name-box">
+                            <div class="user-pic"></div>
+                            <div class="user-name">
+                                <span></span>你好!
+                            </div>
+                        </div>
+                        <div class="user-info">
+                            <a class="money">
+                                <p>余额(元)</p>
+                                <strong>0.00</strong>
+                            </a>
+                            <a class="coupon">
+                                <p>优惠券(张)</p>
+                                <strong>0</strong>
+                            </a>
+                            <a class="integral">
+                                <p>积分(分)</p>
+                                <strong>0</strong>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="btn">
+                <div class="mycar-btn">
+                    <span class="tips">购物车</span>
+                    <div class="num">0</div>
+                    <div class="mycar lt">
+                        <h3>购物车</h3>
+                        <img src="images/index/empty.jpg" alt="">
+                    </div>
+                    <div class="new-car">
+                        <div class="car-header clearfix">
+                            <p> <input type="checkbox" class="select-all">全选</p>
+                            <span>购物车</span>
+                        </div>
+                        <div class="car-main">
+
+                        </div>
+                        <div class="car-foot">
+                            <p class="clearfix">
+                                <span class="fl">已选<strong></strong>件</span>
+                                <span class="fr">总金额:<strong></strong></span>
+                            </p>
+                            <a href="car.html" target="_blank" class="btn-gotocar">去购物车结算</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="btn btn2">
+                <div class="mycoupon-btn">
+                    <span class="tips">优惠劵</span>
+                </div>
+            </div>
+            <div class="btn btn2">
+                <div class="mytrack-btn">
+                    <span class="tips">我的足迹</span>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar-bottom rt">
+            <div>
+                <div class="top-btn">
+                    <span class="tips">回到顶部</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 侧边栏 结束 -->
+    <!-- 固定屏幕上的商品详情导航 开始-->
+    <div class="scroll-tab-fixed">
+        <div class="tab-fixed-box clearfix">
+            <div class="stor-name">
+                <div class="shop-home-box">
+                    <a href="" rel="noopener noreferrer">
+                        <h4>木易生活专柜</h4>
+                    </a>
+                    <em></em>
+                    <i class="fa fa-angle-down"></i>
+                </div>
+                <div class="pull-down">
+                    <div class="store-con">
+                        <div class="middle">
+                            <h4>
+                                店铺总评分：
+                                <strong>5</strong>
+                            </h4>
+                            <ul>
+                                <li>描述相符：5</li>
+                                <li>服务态度：5</li>
+                                <li>发货速度：5</li>
+                            </ul>
+                        </div>
+
+                        <div class="view-store">
+                            <a href="http://" rel="noopener noreferrer">浏览商铺</a>
+                            <span>收藏店铺</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 固定屏幕上的商品详情导航 结束-->
+</body>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/util.js"></script>
+<script src="js/login.js"></script>
+<script src="js/sidebar.js"></script>
+<script src="js/particulars.js"></script>
+
+<script src="js/header.js"></script>
+<script src="js/sidebar-car.js"></script>
+<script src="js/jquery-1.10.2.js"></script>
+<script src="js/jquery.city.js"></script>
+<script src="js/jquery.lazyload.js"></script>
+
+<script>
+    $("img").lazyload();
+    $("img.lazy").lazyload({ threshold: 500 });
+    $(function () {
+        $('.commodity .select .address').jcity({
+            urlOrData: '/js/citydata.json',
+            animate: { showClass: 'animated flipInX', hideClass: 'animated flipOutX' },  // 需要第一步引用的animate.min.css文件，也可以自己定义动画 
+            onChoice: function (data) {
+                // console.log(data)
+            }
+        });
+    });
+</script>
+
+
+
+</html>

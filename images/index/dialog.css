@@ -1,0 +1,159 @@
+#util-overlayer { width:100%; height:100%; background:#fff; position:absolute; top:0; left:0; right:0; bottom:0; display:none; z-index:9990; }
+#util-dialog { position:absolute; top:-1000px; left:-1000px; width:420px; z-index:9999; font-size:12px; }
+#util-dialog .pdb-bgt,
+#util-dialog .pdb-bgm,
+#util-dialog .pdb-bgb { filter:alpha(opacity=16);-moz-opacity:0.16;opacity:0.16; overflow:hidden; }
+#util-dialog .pdb-bgt { background:url(images/dialog_bg_line.gif) no-repeat; height:10px; line-height:10px; padding-left:10px; }
+#util-dialog .pdb-bgt span { display:block; background:url(images/dialog_bg_line.gif) no-repeat right -10px; height:10px; line-height:10px; }
+#util-dialog .pdb-bgm { background-color:#000; height:300px; }
+#util-dialog .pdb-bgb { background:url(images/dialog_bg_line.gif) no-repeat left -20px; height:10px; line-height:10px; padding-left:10px; }
+#util-dialog .pdb-bgb span { display:block; background:url(images/dialog_bg_line.gif) no-repeat right -30px; height:10px; line-height:10px; }
+#util-dialog .pdb-main { position:absolute; height:300px; top:9px; left:9px; width:400px; z-index:9999; border:solid 1px #beb7ad; background-color:#fff; overflow:hidden; }
+#util-dialog .pdb-main .pdb-title { background-color:#BB282B; color:#fff; height:25px; overflow:hidden; }
+#util-dialog .pdb-main .pdb-title span.close { float:right; display:block; line-height:15px; height:15px; font-size:12px; cursor:pointer; padding-right:15px; margin:5px; background:url(images/dialog_bg_btn.gif) no-repeat right -49px; }
+#util-dialog .pdb-main .pdb-title h4 { float:left; font-size:12px; font-weight:bold; line-height:25px; height:25px; text-indent:10px; padding:0; margin:0; color:#fff; }
+#util-dialog .pdb-main .pdb-title h4.tab { height:22px; padding-top:3px; line-height:22px; padding-left:10px; text-indent:0; }
+#util-dialog .pdb-main .pdb-title h4.tab span { font-weight:bold; display:block; float:left; line-height:22px; height:22px; padding:0 15px; cursor:pointer; }
+#util-dialog .pdb-main .pdb-title h4.tab span.on { color:#BD0021; background:#fff; }
+#util-dialog .pdb-main .pdb-content { background-color:#fff; color:#666; font-size:12px; line-height:150%; overflow:hidden; }
+#util-dialog .pdb-main .pdb-content p { color:#666; }
+#util-dialog .pdb-main .pdb-bottom { height:25px; padding:10px 20px; background:url(images/dialog_bg_bottom.gif) repeat-x; overflow:hidden; }
+#util-dialog .pdb-main .pdb-bottom-text { height:25px; line-height:25px; }
+#util-dialog .pdb-main .pdb-bottom-action { height:25px; line-height:25px; float:right; }
+#util-dialog .pdb-main p { margin:0; padding:0; }
+#util-dialog .pdb-main .msg-success { background:url(images/ico_success_32.png) no-repeat 30px 20px; padding:20px 20px 20px 70px; line-height:20px; }
+#util-dialog .pdb-main .msg-error { background:url(images/ico_error_32.png) no-repeat 30px 20px; padding:25px 20px 20px 70px; line-height:20px; }
+#util-dialog .pdb-main .msg-alert { background:url(images/ico_error_32.png) no-repeat 30px 15px; padding:20px 20px 20px 70px; line-height:20px; }
+#util-dialog .pdb-main .msg-confirm { background:url(images/ico_confirm_32.png) no-repeat 30px 15px; padding:20px 20px 20px 70px; line-height:20px; }
+#util-dialog .pdb-main .fl { float:left; }
+#util-dialog .pdb-main .fr { float:right; }
+#util-dialog .pdb-main .f14 { font-size:14px; }
+#util-dialog .pdb-main .fbold { font-weight:bold; }
+#util-dialog .pdb-main .fred { color:#f00; }
+#util-dialog .pdb-main .p10 { padding:10px; }
+#util-dialog .pdb-main .p20 { padding:20px; }
+#util-dialog .pdb-main .pb20 { padding-bottom:20px; }
+#util-dialog .pdb-main .mt10 { margin-top:10px; }
+#util-dialog .pdb-main .mt20 { margin-top:20px; }
+#util-dialog .pdb-main .mb10 { margin-bottom:10px; }
+#util-dialog .pdb-main .mb20 { margin-bottom:20px; }
+#util-dialog .pdb-main .ml10 { margin-left:10px; }
+#util-dialog .pdb-main .ml20 { margin-left:20px; }
+#util-dialog .pdb-main .tal { text-align:left; }
+#util-dialog .pdb-main .tar { text-align:right; }
+#util-dialog .pdb-main .tac { text-align:center; }
+#util-dialog .pdb-main a.btn { display:inline-block; margin-right:5px; padding:0; height:23px; line-height:23px; text-decoration:none; }
+#util-dialog .pdb-main a.btn em { display:inline-block; font-style:normal; font-size:12px; height:12px; line-height:12px; padding:5px 10px 4px; cursor:pointer; background:url(images/dialog_bg_btn.gif) repeat-x; }
+#util-dialog .pdb-main a.btn-action { border:1px solid #ff8d45; }
+#util-dialog .pdb-main a.btn-action em { color:#fff; font-weight:bold; background-position:left 0; border:1px solid #ffb74c; background-color:#ff8d45; }
+#util-dialog .pdb-main a.btn-cancel { border:1px solid #beb7ad; }
+#util-dialog .pdb-main a.btn-cancel em { color:#666; background-position:left -25px; border:1px solid #fff; background-color:#f5f5f5; }
+#util-dialog .pdb-main .txt-loading-32 { background:url(//i0.ulecdn.com/j/jend/util/dialog/images/indicator_medium.gif) no-repeat center top; height:32px; padding-top:36px; line-height:20px; text-align:center; font-size:14px; }
+#util-dialog .pdb-main dl.prompt { padding:5px 10px; }
+#util-dialog .pdb-main dl.prompt dt { line-height:20px; }
+#util-dialog .pdb-main dl.prompt dd input { border:solid 1px #ccc; height:22px; line-height:22px; padding-left:5px; color:#333; width:90%; }
+
+/*************************新增bootstrap样式 2017/09/25************************/
+#util-dialog .pdb-main .pdb-title.bootstrap span.close
+{
+	background:url(images/close.jpg) no-repeat center center;
+}
+#util-dialog .pdb-bgm.bootstrap
+{
+	background-color: white;
+	filter: alpha(opacity=100);
+    -moz-opacity: 1;
+    opacity: 1;
+}
+#util-dialog .pdb-main.bootstrap
+{
+	border:none;
+	top:10px;
+	border-radius: 5px;
+}
+#util-dialog .pdb-main .pdb-title.bootstrap
+{
+	background-color: white;
+    color: #555555;
+    
+}
+#util-dialog .pdb-main .pdb-title.bootstrap h4
+{
+	background-color: white;
+    color: #555555;
+}
+#util-dialog .pdb-main .pdb-content.bootstrap
+{
+	color: #555555;
+}
+#util-dialog .pdb-main.bootstrap .f14
+{
+	font-size: 20px;
+	font-family: 'Microsoft Yahei';
+	font-weight: bold;
+}
+#util-dialog .pdb-main.bootstrap .pdb-bottom
+{
+	background: white;
+}
+#util-dialog .pdb-main .bootstrap-msg-confirm
+{
+    padding-top: 35px;
+    line-height: 20px;
+    text-align: center;
+}
+
+#util-dialog .pdb-main .pdb-bottom.bootstrap
+{
+	margin-top: -45px;
+	padding-top: 0px;
+	height: 40px;
+	padding-bottom:35px;
+}
+#util-dialog .pdb-main.bootstrap .pdb-bottom-action
+{
+	height: 40px;
+	line-height: 40px;
+	float: left;
+	margin-left: 9%;
+}
+#util-dialog .pdb-main.bootstrap .pdb-bottom-action a
+{
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	width: 140px;
+}
+#util-dialog .pdb-main.bootstrap .pdb-bottom-action .btn.btn-action
+{
+	float: right;
+}
+#util-dialog .pdb-main.bootstrap a.btn-action
+{
+	background-color:#f94b4b;
+	border:none;
+}
+#util-dialog .pdb-main.bootstrap a.btn-action em
+{
+	background-color:#f94b4b;
+	border:none;
+}
+#util-dialog .pdb-main.bootstrap a.btn-cancel
+{
+	background-color:#fafafa;
+}
+#util-dialog .pdb-main.bootstrap a.btn-cancel em
+{
+	background-color:#fafafa;
+	border:none;
+	font-weight: bold;
+}
+#util-dialog .pdb-main.bootstrap a.btn
+{
+	margin-right: 20px;
+}
+#util-dialog .pdb-main.bootstrap a.btn em
+{
+	background:none;
+	line-height:35px;
+}

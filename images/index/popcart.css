@@ -1,0 +1,31 @@
+.mod-popcart { padding:20px; }
+.mod-popcart h3 { font-size:14px; line-height:20px; }
+.mod-popcart dl { overflow:hidden; margin-top:10px; }
+.mod-popcart dt { float:left; width:50px; line-height:24px; }
+.mod-popcart dd { margin-left:50px; line-height:24px; }
+.mod-popcart ul li { float:left; margin:0 10px 10px 0; border:solid 1px #d6d6d6; line-height:22px; padding:1px; cursor:pointer; position:relative; color:#333; }
+.mod-popcart ul li b { position:absolute; right:0; bottom:0; width:10px; height:10px; font-size:1px; line-height:1px; background:url(images/selected.png) no-repeat; display:none; }
+.mod-popcart ul li:hover { border:solid 1px #a71f24; padding:1px; }
+.mod-popcart ul li.on,
+.mod-popcart ul li.on:hover { border:solid 2px #a71f24; padding:0; }
+.mod-popcart ul li.on b { display:block; }
+.mod-popcart ul li.disabled,
+.mod-popcart ul li.disabled:hover { border:dashed 1px #3d3d3d; color:#3b3b3b; padding:1px; cursor:not-allowed; }
+.mod-popcart dl.listing-price { margin-bottom:10px; }
+.mod-popcart dl.listing-price dd { color:#ea6810; font-size:20px; font-family:Verdana; font-weight:bold; }
+.mod-popcart dl.listing-price dd i { font-size:12px; font-weight:normal; font-family:Arial; }
+.mod-popcart dl.listing-color { margin-top:0; *margin-top:10px; }
+.mod-popcart dl.listing-color img { display:block; width:60px; height:60px; }
+.mod-popcart dl.listing-sizes { margin-top:0; *margin-top:10px; }
+.mod-popcart dl.listing-sizes span { display:block; padding:0 8px; }
+.mod-popcart dl.listing-sizes ul li.on b { _right:-1px; }
+.mod-popcart dl.listing-count dd { height:24px; }
+.mod-popcart dl.listing-count { margin-top:0; *margin-top:10px; }
+.mod-popcart dl.listing-count a { float:left; display:block; margin:0; overflow:hidden; height:22px; line-height:22px; border:solid 1px #ccc; width:22px; text-align:center; font-size:16px; font-weight:bold; font-family:Arial; text-decoration:none; color:#666 !important; -moz-user-select:-moz-none; user-select:none; }
+.mod-popcart dl.listing-count a:hover { background-color:#eee; }
+.mod-popcart dl.listing-count input { float:left; display:block; margin:0; padding:0; width:50px; text-align:center; height:22px; line-height:22px; border:solid 1px #ccc; border-left:none; border-right:none; }
+.mod-popcart dl.listing-count .msgQuantity { margin-left:10px; }
+.mod-popcart dl.listing-count span { float:left; padding-left:5px; }
+.mod-popcart dl.listing-selected dd { height:24px; }
+.mod-popcart dl.listing-selected strong { color:#b30808; }
+.mod-popcart dl.listing-selected span.msg-select { margin-left:10px; color:#f00; font-weight:bold; }

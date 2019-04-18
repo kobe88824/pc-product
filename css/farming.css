@@ -1,0 +1,1276 @@
+body {
+    color: #666;
+    background-color: #f8f4f0;
+}
+ul li {
+    list-style: none;
+}
+
+img{
+    vertical-align: middle;
+}
+a{
+    color: #666;
+}
+.m{
+    vertical-align: middle
+}
+
+/* ======================头部 */
+
+.header{
+    width: 100%;
+    min-width: 1200px;
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #ededed;
+    position: relative;
+    color: #666;
+    z-index: 23;
+
+}
+.header a{
+    color: #666;
+    
+}
+.header .login a,
+.header .user-name{
+    color: #06c;
+    cursor: default;
+}
+
+.header-content{
+    width: 1200px;
+    height: 29px;
+    margin: 0 auto;
+    padding-top:10px;
+}
+.header-left{
+    float: left;
+}
+.header-right{
+    float: right;
+}
+.header-right >ul>li{
+    float: left;
+}
+.header .js_down-app,.header .js_myaccount,.header .site-map-box,.header .js_help-center,.header .call-box {
+    position: relative; 
+}
+
+.header-home{
+    padding: 3px 20px;
+    background:url(../images/index/ico_return-home.png) 0 0 no-repeat;
+}
+.header .phone{
+    padding-left: 15px;
+    background:url(../images/index/header_1407.png) 0 0 no-repeat;
+}
+.header .ico-all-class{
+    padding-left: 20px;
+    background:url(../images/index/header_1407.png) -322px 0 no-repeat;
+}
+.header .ico-call{
+    padding-left: 20px;
+    background:url(../images/index/call.png) 0 0 no-repeat;
+}
+.header .line::before{
+    content: '';
+    border-left: 1px solid #ededed;
+}
+.header .header-right .login{
+    padding: 0 10px;
+}
+.header .myaccount,.header .phone-box,.header .all-class,.header .site-map,.header .help-center,.header .call{
+    padding: 0 10px;
+    border: 1px solid transparent;
+    background-color: #f7f7f7;
+    position: absolute;
+    top: 0px;
+}
+
+.header .js_myaccount,.header .js_help-center,.header .site-map-box,.header .call-box{
+    width: 81.5px;
+}
+
+.header .myaccount,.header .help-center{
+    position: absolute;
+}
+.header .myaccount-list, .header .help-center-list{
+    background-color: #fff;
+    position: absolute;
+    top: 22px;
+    border: 1px solid #ededed;
+    border-top: 1px solid #fff;
+    display: none;
+}
+.header .myaccount-list a,.header .help-center-list a{
+    display: block;
+    line-height: 2;
+    padding:0px 21px 5px 10px;
+    text-decoration: none;
+}
+
+.header .help-center-list a:hover{
+    color: #900;
+    background: #d9d9d9;
+}
+.header .myaccount-list a:hover{
+    color: #900;
+    background: #d9d9d9;
+}
+.header .myaccount a,.header .help-center a{
+    display: inline-block;  
+    height: 27px;
+    text-decoration: none;
+}
+.header .js_down-app{
+    width: 97.5px;
+}
+.header .phone-box{
+    margin-left: 1px;
+    position: absolute;
+    z-index: 2;
+}
+.header .down-app{
+    width: 158px;
+    height: 158px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ededed;
+    border-radius: 10px;
+    position: absolute;
+    top: 19px;
+    left: 50%;
+    margin-left: -90px;
+    display: none;
+    z-index: 1;
+}
+
+.header .all-class{
+    padding:10px 10px 12px ;
+    border-bottom: 1px solid #ededed;
+}
+.header .js_all-class{
+    width: 125.5px;
+}
+.header .all-class-list-box{
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    display: none;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ededed;
+}
+.header .all-class-list{
+    width: 1200px;
+    margin: 0 auto;
+}
+.header .all-class-list ul{
+    width: 1280px;
+    margin: 0 auto;
+}
+.header .all-class-list li{
+    width: 240px;
+    height: 70px;
+    margin: 15px 75px 0 0;
+    float: left;
+    overflow: hidden;
+}
+.header .all-class-list h4 {
+    border-bottom: 1px solid #d9d9d9;
+    font-weight: bold;
+}
+.header .all-class-list h4 a{
+    font-size: 14px;
+    line-height:26px;
+}
+.header .all-class-list p a{
+    line-height:22px;
+    margin-right: 10px;
+    float: left;
+}
+.header .more{
+    float: right
+}
+.header .all-class-list a{
+    text-decoration: none;
+}
+.header .all-class-list p a:hover{
+    color: #c52d15;
+}
+.header .all-class-list h4:hover a{
+    color: #c52d15;
+}
+.header .service{
+    width: 140px;
+    height: 30px;
+    position: absolute;
+    top: 20px;
+    right: 0;
+    background: url(../images/index/header_1407.png) -130px -135px no-repeat;
+    display: none;
+}
+.header .call:hover .service{
+    display: block;
+}
+.header .js_myaccount .active,.header .js_help-center .active{
+    background: #fff;
+    border: 1px solid #ededed;
+    /* padding: 0 10px; */
+}
+.header .js_down-app .active{
+    background: #fff; 
+    border: 1px solid #ededed;
+    border-bottom: 1px solid #fff;
+}
+.header .js_all-class .active{
+    background: #fff; 
+    border: 1px solid #ededed; 
+    border-bottom: 1px solid #fff; 
+    padding-bottom: 12px; 
+}
+
+/*登录模块  开始*/
+.header .ceng{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    display: none;
+    cursor: default;
+}
+.header .ceng .login-register{
+    width: 240px;
+    /* height: 180px; */
+    background-color: #fff;
+    /* border-radius: 10px; */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -150px;
+    margin-top: -150px;
+    padding: 10px 30px 50px;
+}
+
+.header .login-register-tab1{
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+    margin:0 10px 10px;
+}
+
+.header .err1,.header .err2{
+    color: #a71b1c;
+    visibility: hidden;
+}
+.header .user,.header .pwd{
+    width: 235px;
+    height: 35px;
+    padding-left: 5px;
+    outline: none;
+    border: none;
+    border: 1px solid #bdbdbd;
+    background-color: #ddd;
+}
+.header .err2{
+    display: inline-block;
+    margin-bottom: 10px;
+}
+.header .findPWD{
+    margin-left: 30px;
+}
+.header .ceng button{
+    width: 240px;
+    height: 35px;
+    margin-top: 20px;
+    /* border-radius: 35px; */
+    background-color: #a71b1c;
+    outline: none;
+    border:none;
+    color: #fff;
+    font-size: 18px;
+}
+
+.header .exit-button{
+    display: none;
+}
+
+/*登录模块  结束*/
+
+/* ======================头部 结束*/
+
+/* header-top完成 */
+.laide {
+    width: 1902px;
+}
+.laicon {
+    width: 1200px;
+    margin: 0 auto;
+}
+/* header-middle开始 */
+.header-middle {
+    width: 1200px;
+    margin: 0 auto;
+    margin-top: 38px;
+    position: relative;
+}
+.middle-left {
+    float: left;
+}
+.middle-mid {
+    width: 564px;
+    margin-left: 110px;
+    float: left;
+}
+.mid-search {
+    width: 326px;
+    height: 26px;
+    border: 2px solid #ff9933;
+    margin-top: 10px;
+    float: left;
+    font-size: 14px;
+}
+.mid-box {
+    width: 70px;
+    height: 30px;
+    background-color: #ff9933;
+    text-align: center;
+    line-height: 30px;
+    float: left;
+    margin-top: 10px;
+    color: white;
+    cursor: pointer;
+}
+.mid-right {
+    width: 146px;
+    height: 28px;
+    border: 2px solid #ff9933;
+    margin: 10px 0 0 10px;
+    line-height: 28px;
+}
+.mid-right img {
+    margin: 7px;
+}
+.mid-right span {
+    /* padding-right: 10px; */
+    /* border-right: 1px solid #ededed; */
+    height: 20px;
+}
+.mid-right-line {
+    margin-left: 5px;
+    width: 2px;
+    background-color: #ededed;
+    margin-top: 9px;
+    height:12px;
+}
+.mid-text {
+    color: black;
+    margin: 0 16px;
+}
+.mid-pic {
+    color: black;
+}
+.mid-right {
+    cursor: pointer;
+}
+.middle-hot {
+    position: absolute;
+    left: 326px;
+    top: 58px;
+}
+.middle-hot a {
+    margin: 0 5px;
+}
+.show1 {
+    color: red;
+}
+
+.header-bottom {
+    width: 1200px;
+    margin: 0 auto;
+    margin-top: 28px;
+}
+.header-bo-left {
+    width: 200px;
+    height: 40px;
+    background-color: #ee7700;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+}
+.bo-left-text {
+    font-size: 16px;
+    color: white;
+    font-weight: bolder;
+}
+.header-bo-left img {
+    vertical-align: middle;
+}
+.header-bo-middle img{
+    margin: 0 15px;
+    margin-top: 12px;
+}
+.header-bo-middle li {
+    font-size: 16px;
+}
+.header-bo-middle {
+    height: 40px;
+    line-height: 40px;
+}
+.show2 {
+    color: #ee7700;
+}
+.header-bo-right {
+    font-size: 14px;
+    height: 40px;
+    line-height: 40px;
+}
+
+/* content开始 */
+.content-first {
+    width: 100%;
+    height: 400px;
+    border-top: 2px solid #ee7700;
+}
+.con-firMiddle {
+    width: 1200px;
+    height: 400px;
+    margin: 0 auto;
+    position: relative;
+}
+.cont-first-left {
+    width: 200px;
+    background: url(../images/farming/catemain_bg.png);
+    background-color: rgb(206,31,56);
+}
+.cont-first-right {
+    width: 220px;
+}
+.cont-picture {
+    width: 780px;
+    height: 400px;
+    overflow: hidden;
+}
+.cont-picture img{
+    width: 780px;
+    height: 400px;
+}
+.cont-item {
+    height: 70px;
+}
+.cont-first-left-blank {
+    height: 25px !important;
+}
+.cont-item {
+    padding-left: 19px;
+}
+.conta-li {
+    width: 70px;
+    height: 18px;
+    margin-right: 5px;
+    line-height: 13px;
+    color: #fff;
+}
+.conta {
+    display: block;
+    background: url(../images/farming/icon.png) no-repeat;
+    padding-left: 25px;
+    color: #fff;
+    width: 156px;
+    height: 30px;
+    font-size: 14px;
+    line-height: 30px;
+}
+.cont-item a.icon-1 {
+    background-position: 0 -44px;
+}
+.cont-item a.icon-2 {
+    background-position: 0 -74px;
+}.cont-item a.icon-3 {
+    background-position: 0 -106px;
+}.cont-item a.icon-4 {
+    background-position: 0 -138px;
+}.cont-item a.icon-5 {
+    background-position: 0 -170px;
+}
+
+/* 轮播图圆点 */
+.content-first {
+    position: relative;
+    background-color: rgb(206,31,56);
+    transition: background 0.5s;
+}
+.content-first .circle {
+    position: absolute;
+    right: 50%;
+    bottom: 15px;
+    text-align: center;
+    margin-right: -350px;
+    /* width: 198px; */
+    height: 25px;
+}
+.content-first .circle span {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    line-height: 24px;
+    color: #fff;
+    background: url(../images/farming/slide-circle.png) 0px 0px no-repeat;
+    margin-left: 3px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.circle-show {
+    background-position: -25px 0px !important;
+}
+
+/* 右面Exp信息 */
+.cont-first-right {
+    width: 220px;
+    height: 230px;
+    background: url(../images/farming/icon-01.png) no-repeat;
+    background-position: 10px 20px;
+}
+.cont-right-Exp {
+    padding-top: 35px;
+    padding-left: 8px;
+    width: 200px;
+}
+.exp-list p{
+    display: block;
+    height: 16px;
+    overflow: hidden;
+    color: #333;
+    font-size: 13px;
+    line-height: 16px;
+}
+
+.list-circle {
+    background: url(../images/farming/icon-02.png) no-repeat center;
+    width: 10px;
+    height: 9px;
+    display: inline-block;
+    padding: 0px 4px;
+}
+/* 显示的样式 */
+.cont-right-Exp .exp-Olist{
+    padding-top: 10px;
+    height: 65px;
+    overflow: hidden;
+}
+/* 显示时 div的样式 */
+.exp-Olist .exp-list-box {
+    display: block;
+    width: 200px;
+    height: 45px;
+    font-size: 12px;
+    line-height: 15px;
+}
+/* 隐藏的样式 */
+.cont-right-Exp .exp-Hlist {
+    height: 16px;
+    padding-top: 10px;
+    overflow: hidden;
+}
+/* 隐藏时 div的样式 */
+.exp-Hlist .exp-list-box {
+    display: none;
+}
+/* 隐藏时a的样式 */
+.exp-Hlist .exp-list-box a {
+    font-size: 12px;
+    height: 16px;
+    display: block;
+    float: left;
+    overflow: hidden;
+}
+/* 图片的样式 */
+.cont-right-Exp .exp-list-box img {
+    width: 65px;
+    height: 45px;
+}
+/* 显示时a的样式 */
+.exp-Olist .exp-list-box a {
+    display: block;
+    color: #888;
+    height: 45px;
+    overflow: hidden;
+    float: left;
+}
+/* 显示时 a标签里面的样式 */
+.exp-Olist .exp-pic {
+    display: block;
+    color: #888;
+    height: 45px;
+    overflow: hidden;
+    float: left;
+}
+/* 显示时 a标签文字的样式 */
+.exp-Olist .exp-til {
+    display: block;
+    width: 120px;
+    overflow: hidden;
+    padding: 5px 0;
+    letter-spacing: 1px;
+    line-height: 15px;
+    margin-left: 10px;
+}
+/* p标签的样式 */
+.cont-first-right p {
+    display: block;
+    height: 16px;
+    overflow: hidden;
+    color: #333;
+    font-size: 13px;
+    line-height: 16px;
+}
+/* 广告滑块样式 */
+.cont-slide-right {
+    width: 220px;
+    height: 400px;
+    background-color: #f5f5f5;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+/* 广告样式 */
+.cont-right-ad {
+    display: block;
+    width: 200px;
+    height: 150px;
+    margin: 0 10px 10px 10px;
+    padding-top: 10px;
+    border-top: 2px solid #999;
+}
+.cont-right-ad img {
+    display: block;
+    width: 200px;
+    height: 150px;
+}
+/* subcate */
+.cont-first-left {
+    position: relative;
+}
+.conLeft-subcate {
+    display: none;
+    width: 240px;
+    position: absolute;
+    top: 0px;
+    left: 200px;
+    z-index: 2;
+    height: 400px;
+    opacity: 0.96;
+}
+.subcate1 {
+    background: url(../images/farming/bg_subcate1.png) #fff bottom no-repeat;
+}
+.subcate2 {
+    background: url(../images/farming/bg_subcate2.png) #fff bottom no-repeat;
+}
+.subcate3 {
+    background: url(../images/farming/bg_subcate3.png) #fff bottom no-repeat;
+}
+.subcate4 {
+    background: url(../images/farming/bg_subcate4.png) #fff bottom no-repeat;
+}
+.subcate5 {
+    background: url(../images/farming/bg_subcate5.png) #fff bottom no-repeat;
+}
+.subcate-lists {
+    float: left;
+    line-height: 20px;
+    padding: 10px 0;
+    width: 300px;
+    font-family: "microsoft yahei";
+    font-size: 12px;
+}
+.subcate-list {
+    padding: 1px 0px 1px;
+    margin-left: 30px;
+    width: 205px !important;
+}
+.subcate-title {
+    display: inline-block !important;
+    color: #e70 !important;
+    font-weight: bold;
+    padding: 2px 0;
+    text-decoration: none;
+}
+.subcate-list i {
+    display: inline-block;
+  width: 10px;
+  height: 7px;
+  background: url(../images/farming/cate_jb.png) right no-repeat;
+}
+.subcate-detail li {
+    height: 20px !important;
+    float: left;
+    margin-left: -5px;
+    margin-right: 5px !important    ;
+    background: url(../images/farming/cate_jg1.png) right no-repeat;
+}
+
+.subcate-detail li a {
+    display: block;
+    white-space: nowrap;
+    padding: 0 5px;
+    color: #444;
+}
+
+/* 鼠标悬浮菜单变色特效 */
+.item-hover {
+    background-color: rgb(235, 140, 46);
+}
+
+/* 秒杀 */
+.content-seckill {
+    width: 100%;
+    height: 310px;
+}
+.content-seckill .seckills {
+    width: 1200px;
+    margin: 0 auto;
+    height: 310px;
+}
+.content {
+    width: 100%;
+    min-width: 1903px;
+}
+/* 秒杀左块，右块 */
+.seckgroup1,.seckgroup2 {
+    width: 590px;
+    height: 310px;
+    background-color: #fff;
+}
+.seckgroup1 {
+    margin-right: 10px;
+}
+.seckgroup2 {
+    margin-left: 10px;
+}
+/* 秒杀页头背景图 */
+.seck-header1 {
+    height: 48px;
+    position: relative;
+    background: url(../images/farming/seckill.jpg) no-repeat #ff8049;
+}
+.seck-time {
+    float: left;
+    width: 100%;
+    height: 48px;
+    cursor: pointer;
+    text-align: left;
+    font-family: "microsoft yahei";
+    font-size: 16px;
+    color: #fff;
+}
+.time-box {
+    position: absolute;
+    right: 154px;
+    top: 14px;
+}
+.timeout {
+    position: absolute;
+
+    width: 137px;
+    top: 14px;
+    right: 10px;
+}
+.seck-header2 {
+    height: 48px;
+    position: relative;
+    background: url(../images/farming/seckill1.jpg) no-repeat #ffad41;
+}
+.seck-wrap ul {
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.wrap-list {
+    width: 170px;
+    margin: 10px;
+}
+/* 拼团 */
+.wrap-list section {
+    position: relative;
+    width: 170px;
+    height: 170px;
+}
+
+.wrap-list section img {
+    width: 100%;
+    height: 100%;    
+}
+.wrap-title {
+    height: 24px;
+    line-height: 24px;
+    font-size: 14px;
+    overflow: hidden;
+}
+.seck-wrap li .wrap-title {
+    margin-top: 5px;
+    color: #333;
+}
+.wrap-price {
+    display: flex;
+    margin-top: 5px;
+    border: 1px solid #e70;
+    box-sizing: border-box;
+    text-align: center;
+    font-family: Arial;
+}
+.wrap-price .price-now {
+    width: 98px;
+    color: #fff;
+    background: #e70;
+    height: 22px;
+    line-height: 22px;
+    font-size: 16px;
+}
+.wrap-price .price-old {
+    margin: 0;
+    width: 70px;
+    color: #e70;
+    height: 22px;
+    line-height: 22px;
+    font-size: 14px;
+}
+.priced {
+    text-decoration: line-through;
+    color: rgb(133, 130, 130) !important;
+    line-height: 22px;
+}
+/* 甄选 */
+.content-zhen {
+    background: url(../images/farming/zhenxuan.jpg) no-repeat top center;
+    padding-top: 125px;
+    margin-top: 20px;
+}
+.zhen-box {
+    height: 400px;
+    width: 1200px;
+    margin: 0 auto;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    background-color: #fff;
+}
+.zhen-box li {
+    width: 250px;
+    height: 350px;
+    background-color: #fff;
+    margin: 25px;
+}
+.zhen-box img {
+    width: 250px;
+    height: 250px;
+    display: inline-block;
+}
+.zhen-title {
+    width: 250px;
+    height: 20px;
+    line-height: 20px;
+    color: #333;
+    text-align: center;
+    overflow: hidden;
+    font-size: 18px;
+}
+.zhen-tj {
+    width: 250px;
+    height: 15px;
+    line-height: 15px;
+    color: #bba778;
+    text-align: center;
+    overflow: hidden;
+    font-size: 14px;
+}
+.zhen-price {
+    color: #c8802a;
+    text-align: center;
+    font-size: 24px;
+}
+.content-zhen li div {
+    margin: 5px 0;
+}
+.content-zhen .zhen-price sub {
+    font-size: 18px;
+}
+sub {
+    margin-left: -4px;
+    bottom: -0.1em;
+}
+/* 扶贫  */
+.content-aidPoor {
+    background: url(../images/farming/fupin.jpg) no-repeat top center;
+    padding-top: 125px;
+    margin: 65px 0;
+}
+.content-aidPoor .aidPoor {
+    height: 360px;
+    width: 1200px;
+    margin: 0 auto;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    background-color: #fff;
+}
+.aidPoor li{
+    width: 350px;
+    height: 300px;
+    background-color: #eee;
+    margin: 25px;
+}
+.aidPoor img {
+    display: inline-block;
+    width: 350px;
+    height: 180px;
+}
+.aidPoor li p {
+    width: 300px;
+    height: 80px;
+    padding-top: 4px;
+    line-height: 25px;
+    color: #333;
+    margin: 0 auto;
+    overflow: hidden;
+    font-size: 14px;
+}
+.aid-poor-more {
+    width: 320px;
+    height: 15px;
+    line-height: 15px;
+    color: #ff7b33;
+    text-align: right;
+    overflow: hidden;
+    font-size: 14px;
+    display: inline-block;
+}
+
+/* 生鲜超市 */
+.content-fresh-food {
+    width: 1220px;
+    margin: 0 auto;
+}
+.fresh-food {
+    width: 590px;
+    height: 600px;
+    margin: 10px;
+}
+.food-header {
+    position: relative;
+    width: 590px;
+    height: 200px;
+}
+.foodH-left img{
+    width: 190px;
+    height: 200px;
+}
+.foodH-right {
+    width: 400px;
+    height: 200px;
+}
+.foodH-more {
+    position: absolute;
+    width: 40px;
+    height: 25px;
+    text-indent: -9999px;
+    top: 30px;
+    left: 115px;
+}
+.foodH-list {
+    position: absolute;
+    top: 80px;
+    left: 10px;
+    width: 180px;
+    height: 85px;
+    z-index: 3;
+    overflow: hidden;
+}
+.foodH-list li {
+    height: 20px;
+    margin: 4px 2px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 20px;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+}
+.foodH-list li a {
+    text-align: center;
+    height: 15px;
+    font-size: 14px;
+    text-decoration: none;
+    color: #666;
+    font-family: "microsoft yahei";
+    line-height: 20px;
+    padding: 10px;
+}
+.foodH-list a:hover {
+    color: #ee7700;
+}
+.foodH-right {
+    width: 400px;
+    height: 200px; 
+}
+.foodH-right img {
+    width: 400px;
+    height: 200px;
+}
+.flldL-cont {
+    width: 590px;
+    height: 400px;
+    position: relative;
+}
+.foodL-list {
+    width: 590px;
+    height: 250px;
+    overflow: hidden;
+    padding-top: 10px;
+    border-bottom: 2px solid #cfcfcf;
+    background: #fff;
+}
+.foodL-list li {
+    width: 170px;
+    height: 220px;
+    position: relative;
+    margin: 13px;
+    font: 12px/20px;
+    color: #333;
+}
+.foodL-list li img {
+    width: 168px;
+    height: 168px;
+    display: block;
+    border: 1px solid #f0f0f0;
+}
+.foodL-title {
+    height: 20px;
+    overflow: hidden;
+    line-height: 20px;
+    width: 160px;
+    margin: 0 auto;
+    font-size: 14px;
+    margin: 5px 0;
+}
+.foodL-price {
+    font-size: 18px;
+    color: #e70;
+    height: 25px;
+    font-family: "microsoft yahei";
+    width: 150px;
+    margin: 0 auto;
+}
+.foodL-price del {
+    color: #999;
+    font-size: 10px;
+    padding-left: 5px;
+}
+.foodL-icon {
+    width: 590px;
+    height: 130px;
+    overflow: hidden;
+    padding-top: 10px;
+    background: #fff;
+}
+.foodL-icon li {
+    transition: all 1s;
+    float: left;
+    width: 120px;
+    height: 75px;
+    position: relative;
+    padding: 0 14px 0 12px;
+    border-left: 1px solid #999;
+    margin: 20px 0 16px 0;
+}
+.foodL-icon li:hover {
+    top: -2px;
+    box-shadow: 0 16px 30px -14px rgba(0,36,100,0.3);
+    transition: box-shadow .5s;
+}
+.foodL-icon li img {
+    width: 120px;
+    height: 75px;
+}
+.foodL-list li {
+    transition: all .5s;
+}
+.foodL-list li:hover {
+    transform: translateY(-5px);
+}
+/* eredar */
+.content-eredar {
+    width: 1220px;
+    margin: 0 auto;
+    background: url(../images/farming/eredar.png) no-repeat top center;
+    padding-top: 65px;
+    margin-top: 60px;
+}
+.content-eredar .eredar {
+    width: 590px;
+    height: 470px;
+    margin: 10px;
+}
+.content-eredar .eredar img{
+    width: 590px;
+    height: 190px;
+}
+.content-eredar .eredar .foodL-list img{
+    width: 168px;
+    height: 168px;
+    display: block;
+    border: 1px solid #f0f0f0;
+}
+/* 地方馆 */
+.content-local {
+    height: 550px;
+    background: url(../images/farming/local.png) no-repeat top center;
+    width: 1200px;
+    margin: 0 auto;
+    padding-top: 65px;
+    margin-top: 20px;
+}
+.local-left {
+    width: 400px;
+    height: 480px;
+    float: left;
+    background-color: #fff;
+    overflow: hidden;
+}
+.local-left img {
+    width: 400px;
+    height: 200px;
+}
+.local-left .localL-des {
+    width: 400px;
+    height: 115px;
+    background-color: #e7e0c6;
+    font-size: 14px;
+    color: #333;
+}
+.local-left .localL-des .des-text {
+    width: 350px;
+    margin: 0 auto;
+}
+.local-left .localL-des .des-text h3{
+    font-size: 16px;
+    padding: 3px 0;
+}
+.localL-list {
+    width: 400px;
+    height: 165px;
+    position: relative;
+    overflow: hidden;
+}
+.localL-list .localList-title {
+    color: #333;
+    font-size: 18px;
+    background-color: #fff;
+    width: 130px;
+    height: 30px;
+    line-height: 30px;
+    position: absolute;
+    top: 5px;
+    left: 130px;
+    text-align: center;
+}
+.localL-list .localList-cont {
+    border: 2px solid #999;
+    width: 370px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.localL-list .localList-cont ul {
+    width: 100%;
+    margin: 10px auto;
+    text-align: center;
+    height: 110px;
+    overflow: hidden;
+}
+.localL-list .localList-cont ul li {
+    color: #666;
+    float: left;
+    font-size: 14px;
+    margin: 5px;
+}
+.localList-cont li:hover a {
+    color: #ee7700;
+}
+.content-local .local-right {
+    width: 800px;
+    height: 480px;
+    background-color: #fff;
+    overflow: hidden;
+}
+.content-local .local-right .local-hot {
+    margin-top: 10px;
+} 
+.content-local .local-right .local-hot ul li{
+    width: 180px;
+    height: 210px;
+    margin: 5px 0px 5px 5px;
+    padding: 5px 0px 5px 10px;
+}
+.content-local .local-right .local-hot ul li img {
+    width: 180px;
+    height: 210px;
+}
+/* 底部 */
+.footer {
+    min-width: 1200px;
+    padding: 0;
+    font-family: "宋体";
+    font-size: 12px;
+    background-color: #fff;
+    clear: both;
+    border-top: solid 1px #e7e3e4;
+    margin-top: 30px;
+}
+.footer .footer-help {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+.footer .footer-help li {
+    padding: 15px 0 10px;
+    width: 220px;
+}
+.footer .footer-help li p {
+    padding-left: 22px;
+}
+.footer .footer-help li a {
+    display: block;
+    line-height: 22px;
+    color: #888;
+    background-position: -1000px 0;
+    padding-left: 10px;
+}
+.footer .footer-help li h4 {
+    font-size: 14px;
+    color: #666;
+    line-height: 24px;
+    margin: 0 0 5px;
+    padding-left: 32px;
+    background: url(../images/farming/helper-icon.png) no-repeat;
+}
+.footer .footer-help .footH1 h4{
+    background-position: 0 0;
+}
+.footer .footer-help .footH2 h4{
+    background-position: 0 -24px;
+}
+.footer .footer-help .footH3 h4{
+    background-position: 0 -48px;
+}
+.footer .footer-help .footH4 h4{
+    background-position: 0 -72px;
+}
+.footIcon {
+    border-left: solid 1px #dadada;
+    padding: 20px 0 20px 20px;
+    width: 220px;
+}
+.footer-copyright {
+    line-height: 24px;
+    text-align: center;
+    color: #999;
+    padding: 20px 0;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var x = 1234;
+        // function text() {
+        //     var x = 4567;
+        //     console.log(this.x);
+        // }
+        // text();
+        // var textObj = new text();
+        // var o = {};
+        // o.x = 5678;
+        // o.m = text;
+        // o.m();
+        var p = function() {
+            var name = 'name';
+            return {
+                get: function() {
+                    return name ;
+                },
+                set: function(name) {
+                    return name;
+                }
+            }
+        }
+        console.log(p.name);
+        console.log(p.get)
+    </script>
+</body>
+</html>  

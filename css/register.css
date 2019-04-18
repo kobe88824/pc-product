@@ -1,0 +1,325 @@
+
+/* ======================搜索 */
+.search{
+    width: 100%;
+    min-width: 1200px;
+    border-bottom: 5px solid #a71b1c;
+}
+.search .search-content{
+	width: 1200px;
+	height: 100px;
+	margin:0 auto;
+	position: relative;
+}
+.search .logo{
+    width: 75px;
+    height: 75px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -37.5px;
+    background: url(../images/index/logo.png) 0 0 no-repeat
+}
+
+
+/* ======================搜索 结束 */
+/* 注册部分 开始 */
+.register{
+    width: 100%;
+    background-color: #f7f7f7;
+    padding: 20px 0 ;
+
+}
+.register .content{
+    width: 1000px;
+    margin:  0 auto ;
+    padding-top:50px;
+    background-color: #fff;
+}
+.register .register-box{
+    width: 320px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+.register .title{
+    height: 47px;
+    border-bottom: 1px solid #bdbdbd; 
+    margin: 0 10px;
+    background: url(../images/index/title_tip.jpg) 665px 10px no-repeat;
+}
+.register h2{
+    text-align: center;
+    margin-left: 100px ;
+    width: 138px;
+    height: 46px;
+    line-height: 46px;
+    font-size: 20px;
+    font-weight: bold;
+    border: 1px solid #bdbdbd; 
+    color: #666;
+    cursor: pointer;
+}
+.register .content input{
+    width: 308px;
+    height: 38px;
+    padding-left: 10px;
+    outline: none;
+    border: 1px solid #bdbdbd;
+    background-color: rgb(250, 255, 189);
+    margin-bottom: 25px;
+}
+.register .register-box >div{
+    position: relative;
+}
+.register .slide-box{
+    width: 318px;
+    height: 38px;
+    margin-bottom: 25px;
+    border: 1px solid #bdbdbd;
+    background-color: #bdbdbd;
+    line-height: 38px;
+    color: gray;
+    text-align: center;
+    position: relative;
+}
+.register .ceng{
+    width: 0;
+    height: 38px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #a71b1c;
+}
+.register .slide-box > p{
+    color: #fff;
+}
+.register input.active{
+    border: 1px solid #a71b1c;
+}
+.register .slide{
+    width: 38px;
+    height: 38px;
+    border: 1px solid #bdbdbd;
+    position: absolute;
+    left: -1px;
+    top: -1px;
+    background-color: rgb(250, 255, 189);
+    cursor: move;
+}
+.register button{
+    width: 320px;
+    height: 40px;
+    background-color: #a71b1c;
+    outline: none;
+    border: none;
+}
+.register .num{
+    height: 40px;
+    margin-bottom: 25px;
+    position: relative;
+    left: 0;
+    top: 0;
+}
+
+
+.register .ceng{
+    overflow: hidden;
+    color: #fff;
+
+}
+.register .ceng p{
+    white-space: nowrap;
+    position: absolute;
+    top: 0;
+    left: 95px;
+}
+.register .fa-spinner{
+    margin: 4px auto;
+    vertical-align: middle;
+}
+.register .fa-times-circle-o{
+    color: #f25c3c;
+}
+.register .fa-check-circle-o{
+    color: green;
+}
+.register .tips{
+    width: 260px;
+    padding:10px;
+    font-size: 12px;
+    position: absolute;
+    top: 0;
+    right:-300px;
+    background-color: #ddd;
+    display: none;
+}
+.register .tips::after{
+    content: '';
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-right:10px solid #ddd;
+    position: absolute;
+    left: -20px;
+    top: 10px;
+}
+.register .err1,
+.register .err2,
+.register .err3,
+.register .err4,
+.register .err5,
+.register .err6,
+.register .err11,
+.register .err21,
+.register .err31,
+.register .err41{
+    width: 260px;
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    right:-280px;
+    font-size: 12px;
+    color: #f00;
+    display: none;
+}
+.register .err5,
+.register .err6{
+    top:0;
+}
+.register .err5{
+    right:-200px;
+}
+/* .register .state p{
+    text-align: center;
+} */
+.register button{
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.register .term span{
+    font-size: 12px;
+}
+.register a{
+    text-decoration: none;
+    color: #a71b1c;
+    font-size: 12px;
+}
+.register .term input{
+    width: 15px;
+    height: 15px;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #a71b1c;
+    outline: #a71b1c;
+    background-color: #fff;
+    vertical-align: middle;
+}
+/* 注册部分 结束 */
+
+/*=============底部 开始*/
+.footer{
+    width: 1200px;
+    margin: 20px auto;
+}
+.footer .footer-banner{
+    height: 56px;
+    width: 100%;
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+    background: url(../images/index/footer1603.png) 0px -122px no-repeat;
+}
+.footer .footer-banner a{
+    float: left;
+    height: 52px;
+    cursor: pointer;
+    /* line-height: 52px; */
+}
+.footer .footer-banner a.banner1{
+    width: 80px;
+    margin-left: 30px;
+}
+.footer .footer-banner a.banner2{
+    width: 120px;
+    margin-left: 30px;
+}
+.footer .footer-banner a.banner3{
+    width: 200px;
+    margin-left: 95px;
+}
+.footer .footer-banner a.banner4{
+    width: 200px;
+    margin-left: 95px;
+}
+/* 购物助手链接 */
+.footer .footer-helper{
+    width: 1200px;
+    padding:15px 0 20px; 
+}
+.footer a:link{
+    text-decoration:none;
+    color: #888;
+}
+.footer a:visited{
+    text-decoration:none;
+    color: #888;
+}
+.footer a:hover{
+    text-decoration:none;
+    color: #888;
+}
+.footer a:active{
+    text-decoration:none;
+    color: #888;
+}
+.footer .footer-helper ul li{
+    width: 120px;
+    /* height: 182px; */
+    font-size: 12px;
+    float: left;
+    padding-right: 92px;
+}
+.footer .footer-helper ul li h4{
+    color: #666;
+    line-height: 22px;
+    border-bottom: dotted 1px #ccc;
+    margin: 0 0 5px;
+}
+.footer .footer-helper ul li .href-box{
+    width: 120px;
+}
+.footer .footer-helper ul li .href-box a{
+    width: 120px;
+    float: left;
+    line-height: 22px;
+}
+.footer .footer-helper ul li.footer-left{
+    padding-left: 20px;
+}
+.footer .footer-helper ul li.footer-right{
+    padding: 0;
+}
+/* 购物助手链接结束 */
+.footer .footer-license{
+    font-size: 12px;
+    color:#999;
+    padding: 15px 0 5px;
+    border-top: solid 1px #ddd;
+}
+.footer .copyright{
+    line-height: 20px;
+    color: #999;
+    font-size: 12px;
+}
+.footer .footer-icon{
+    margin-top: 15px;
+    height: 34px;
+    background: url(../images/index/footer1603.png) 0px 0px no-repeat;
+}
+.footer .footer-icon a{
+    float: left;
+    width: 100px;
+    height: 34px;
+    margin-right: 10px;
+}
+/* 底部结束 */

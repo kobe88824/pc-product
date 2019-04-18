@@ -1,0 +1,770 @@
+// ------------------------
+// ubar 右侧公共浮动栏处理
+// ------------------------
+var storeId;
+(function() {
+    //---------------------
+    // 依赖插件定义
+    JEND.load.add('mousewheel', {
+        js: 'j/lib/jscrollpane/jquery.mousewheel.js'
+    });
+    JEND.load.add('jscrollpane', {
+        js: 'j/lib/jscrollpane/jquery.jscrollpane.min.js',
+        css: 'j/lib/jscrollpane/jquery.jscrollpane.css',
+        requires: 'mousewheel'
+    });
+    //---------------------
+    // ubar通用模块类定义
+    var UbarModClass = function(data) {
+        //-----------------
+        var that = this;
+        var hoverClass = 'jui-ubar-tab-hover';
+        var activeClass = 'jui-ubar-tab-active';
+        //-----------------
+        // 模块tab
+        this.tab = {
+            //-------------
+            element: data.tabElm,
+            //-------------
+            // 判断是否hover状态
+            isHover: function() {
+                return this.element && this.element.hasClass(hoverClass);
+            },
+            // 判断是否active状态
+            isActive: function() {
+                return this.element && this.element.hasClass(activeClass);
+            },
+            // 设置为hover
+            setHover: function(status) {
+                this.element && this.element[status?'addClass':'removeClass'](hoverClass);
+            },
+            // 设置为active
+            setActive: function(status) {
+                this.element && this.element[status?'addClass':'removeClass'](activeClass);
+//				if (this.afterShow) {
+//					this.afterShow(this.isActive());
+//				}
+            },
+            // 设置模块状态 show/hide
+            showMod: function(showStatus) {
+                showStatus = showStatus || !this.isActive();
+                JEND.ubar.hideAllModule();
+                if (showStatus) {
+                    that.show();
+                }
+                JEND.ubar.updateStatus();
+            },
+            // 初始化事件绑定
+            init: function() {
+                if (this.element) {
+                    // hover事件绑定
+                    this.element.hover(function() {
+                        if (!that.tab.isActive()) {
+                            that.tab.setHover(true);
+                        }
+                    }, function() {
+                        that.tab.setHover(false);
+                    });
+                }
+                if (this.element && that.mod.element) {
+                    // 点击事件绑定
+                    this.element.click(function() {
+                        that.tab.showMod();
+                    });
+                }
+            }
+        };
+        //-----------------
+        // 模块内容
+        this.mod = {
+            //-------------
+            keyname:   data.keyname,
+            viewtype:  data.modView,
+            element:   data.modElm,
+            onInit:    data.onInit,
+            onFinish:  data.onFinish,
+            needLogin: data.needLogin,
+            //-------------
+            // 内容容器滚动条自适应
+            scrollbar: {
+                init: function(listElm) {
+                    if (this.scrollElm) {
+                        return;
+                    }
+                    var _this = this;
+                    this.scrollElm = listElm;
+                    JEND.load('jscrollpane', function() {
+                        _this.create();
+                    });
+                },
+                create: function() {
+                    if (!this.scrollElm || this.scrollElm.height()==0) {
+                        return;
+                    }
+                    var _this = this;
+                    this.scrollElm.jScrollPane();
+                    //
+                    var resizeEvent = function() {
+                        if (_this.scrollElm) {
+                            _this.resize();
+                        } else {
+                            $(window).unbind('resize', resizeEvent);
+                        }
+                    };
+                    $(window).bind('resize', resizeEvent);
+                },
+                resize: function() {
+                    if (!this.scrollElm || this.scrollElm.height()==0) {
+                        return;
+                    }
+                    var _this = this;
+                    if (!this.scrollTimer) {
+                        this.scrollTimer = setTimeout(function() {
+                            _this.scrollElm.data('jsp').reinitialise();
+                            _this.scrollTimer = null;
+                        }, 50);
+                    }
+                },
+                destory: function() {
+                    this.scrollElm = null;
+                }
+            },
+            //-------------
+            // 显示模块内容
+            showView: function(tab, mod) {
+                if (!this.element) {
+                    return false;
+                }
+                if (this.needLogin && !JEND.login.checkUserStatus()) {
+                    that.mod.element.parent().find('iframe[name=miniLogin]').attr('src', '//my.' + JEND.server.uleUrl + '/usr/fastSslogion.do?callback=parent.JEND.ubar.loginSuccess');
+                    JEND.ubar.mods.login.mod.showView(that.tab, that.mod);
+                    return false;
+                }
+                if (tab && mod) {
+                    that.tab = tab;
+                    this.source = mod;
+                }
+
+                this.element.show();
+                if($(this.element).hasClass('jui-ubar-mod-bottom')&&!$(".jui-ubar-tab-livechat").find('em').is(':hidden')){
+                    $(".jui-ubar-mod-bottom").attr('style','display: block;background: transparent;box-shadow: none;');
+                    $(".jui-ubar-mod-livechat .livechat-chatbox,.jui-ubar-mod-livechat .livechat-current").hide();
+                    $(".jui-ubar-mod-livechat").attr('style','background:none;');
+                    $(".livechat-contact").attr('style','right:0;display:block;');
+                }
+
+                if (!this.initStatus) {
+                    this.initView();
+                }
+//				if (this.afterShow) {
+//					this.afterShow();
+//				}
+                this.resetView();
+            },
+            // 隐藏模块内容
+            hideView: function() {
+                this.element && this.element.hide();
+            },
+            // 模块内容切换
+            switchView: function() {
+                this.hideView();
+                this.source && this.source.showView();
+            },
+            // 模块内容初始化
+            initView: function() {
+                if (!this.element) {
+                    return false;
+                }
+                var _this = this;
+                this.initStatus = true;
+                if (this.onInit) {
+                    this.onInit(that.tab, that.mod);
+                } else {
+                    this.showLoading();
+                    JEND.load.add('ubar-'+ this.keyname, {
+                        js: 'app/ubar/v1/{0}/{0}.js'.format(this.keyname)
+                    });
+                    JEND.load('ubar-'+ this.keyname, function() {
+                        _this.hideLoading();
+                        that.gadget = new JEND.ubar.mod[_this.keyname](that.tab, that.mod);
+                        _this.resetView();
+                    });
+                }
+            },
+            // 重置模块显示
+            resetView: function() {
+                if (!this.element) {
+                    return false;
+                }
+                if (this.viewtype == 'float') {
+                    var top = that.tab.element.offset().top - $(document).scrollTop();
+                    var eh = this.element.height();
+                    var wh = $(window).height();
+                    if (top + eh > wh) {
+                        this.element.css({
+                            top: 'auto',
+                            bottom: 0
+                        });
+                    } else {
+                        this.element.css({
+                            top: top,
+                            bottom: 'auto'
+                        });
+                    }
+                }
+                if (this.updateView) {
+                    this.updateView();
+                }
+            },
+            setViewtype: function(viewtype) {
+                this.viewtype = viewtype;
+                if (this.viewtype == 'float') {
+                    this.element.removeClass('jui-ubar-mod-full');
+                    this.element.removeClass('jui-ubar-mod-bottom');
+                    this.resetView();
+                } else {
+                    this.element.addClass('jui-ubar-mod-'+ viewtype);
+                    this.element.removeAttr('style').show();
+                }
+            },
+            // 显示/隐藏加载提示
+            showLoading: function(loadStyle) {
+                this.element && this.element.addClass(loadStyle||'jui-ubar-mod-loading');
+            },
+            hideLoading: function(loadStyle) {
+                this.element && this.element.removeClass(loadStyle||'jui-ubar-mod-loading');
+            },
+            // mod初始化
+            init: function() {
+                this.element && this.viewtype!='float' && this.element.addClass('jui-ubar-mod-'+ this.viewtype);
+            },
+            //是否有优惠券
+            isHasCoupon:function(){
+
+            }
+        };
+        //-----------------
+        this.init = function() {
+            this.tab.init();
+            this.mod.init();
+            if (data.onFinish) {
+                data.onFinish(this.tab, this.mod);
+            }
+        };
+        this.show = function() {
+            this.tab.setActive(true);
+            this.mod.showView();
+        };
+        this.hide = function() {
+            this.tab.setActive(false);
+            this.mod.hideView();
+        };
+        //-----------------
+        this.init();
+    };
+    //---------------------
+    // ubar基本方法定义
+    JEND.define('JEND.ubar', {
+        //-----------------
+        scriptPath: $('script:last').attr('src').sliceBefore('ubar.js'),
+        // html模板
+        tmpl: {
+            container: String(function() {/*!
+				<div class="jui-ubar">
+					<div class="jui-ubar-tabs" data-uspm="902_M0" data-uspm-type="all">
+						<div class="jui-ubar-tabs-top"></div>
+						<div class="jui-ubar-tabs-919"><a href="//www.ule.com/event/2017/0919/919/index.html?srcid=ule2014_hp_topslide_001&uspm=1.1.1_C2014.100016.1.1" target="_blank"><a/></div>
+						<div class="jui-ubar-tabs-middle"></div>
+						<div class="jui-ubar-tabs-bottom"></div>
+					</div>
+					<div class="jui-ubar-mods"></div>
+				</div>*/}).trimNoteChar(),
+            modtab: String(function() {/*!
+				<div class="jui-ubar-tab">
+					<div class="jui-ubar-tab-item jui-ubar-tab-{keyname}">
+						<span class="jui-ubar-tab-logo" data-uspm="{keyname}" style="display:block;"><i></i><em></em></span>
+						<span class="jui-ubar-tab-tips">{title}</span>
+					</div>
+				</div>*/}).trimNoteChar(),
+            modbody: String(function() {/*!
+				<div class="jui-ubar-mod">
+					<div class="jui-ubar-mod-{keyname}"></div>
+				</div>*/}).trimNoteChar()
+        },
+        //-----------------
+        // 初始化
+        init: function() {
+            if ($('.jui-bar').length == 0) {
+                // 容器初始化
+                this.initContainer();
+                // 添加模块
+                this.initModules();
+            }
+        },
+        // 生成ubar容器
+        initContainer: function() {
+            this.container = $(this.tmpl.container);
+            $('body').append(this.container);
+            // 调整容器央视
+            var that = this;
+            var resizeContainer = function() {
+                var pageWidth = ($('body').hasClass('w1280'))?1200:950;
+                var docWidth = $(window).width();
+                if (docWidth < pageWidth + 80) {
+                    that.container.addClass('jui-ubar-mini');
+                } else {
+                    that.container.removeClass('jui-ubar-mini');
+                }
+            };
+            this.container.hover(function() {
+                if ($(this).hasClass('jui-ubar-mini')) {
+                    $(this).addClass('jui-ubar-mini-hover');
+                }
+            }, function() {
+                $(this).removeClass('jui-ubar-mini-hover');
+            });
+            $(window).bind('resize', resizeContainer);
+            $(document).bind('mousedown', function(e) {
+                var srcElm = e.srcElement || e.target;
+                if ($(srcElm).parents('.jui-ubar').length==0) {
+                    that.hideAllModule();
+                }
+            });
+            resizeContainer();
+        },
+        // 添加ubar功能模块
+        initModules: function() {
+            this.mods = {};
+            //
+            this.hideMods = {};
+            if (JEND.page.header && JEND.page.header.isPifaHead) {
+                this.hideMods.category = true;
+            }
+            this.insertModule({
+                align: 'top',
+                keyname: 'category',
+                title: '商品分类',
+                modView: 'full'
+            });
+            this.insertModule({
+                align: 'top',
+                keyname: 'qrcode',
+                title: '二维码'
+            });
+            this.insertModule({
+                align: 'middle',
+                keyname: 'myule',
+                title: '我的邮乐',
+                modView: 'float',
+                needLogin: true
+            });
+            this.insertModule({
+                align: 'middle',
+                keyname: 'mycart',
+                title: '购物车',
+                modView: 'float',
+                onFinish: function(tab, mod) {
+                    // 由于和页面上的内容处理有关联，模块添加后就需要初始化
+                    mod.initView();
+                }
+            });
+            this.insertModule({
+                align: 'middle',
+                keyname: 'mycoupon',
+                //title:'我的资产',
+                title: '优惠券',
+                modView: 'full',
+                needLogin: true
+            });
+            this.insertModule({
+                align: 'middle',
+                keyname: 'mytrack',
+                title: '我的足迹',
+                modView: 'full',
+                needLogin: true,
+                onFinish: function(tab, mod) {
+                    // 由于和页面上的内容处理有关联，模块添加后就需要初始化
+                    mod.initView();
+                }
+            });
+            var othis = this;
+            //添加调用小能客服 start
+            //加载小能客服css样式
+            var css="<link href='//i0."+JEND.server.uleUrl+"/app/livechat/v1/css/xiaoneng.css' rel='stylesheet' />";
+            $("head").append(css);
+            var spanchat=$('body').find('span.plg-livechat-kefu');
+            var dataxn='[';
+            $('span.plg-livechat-kefu').each(function(i,ieach){
+                var m = $(this),
+                    a=m.attr('storeid'),//店铺ID
+                    b=m.attr('merchantId');//商家id
+                dataxn+='{\"storeId\":\"'+a+'\",\"merchantId\":\"'+b+'\",\"type\":\"0\"},';
+            });
+            dataxn=dataxn.substring(0,dataxn.length-1);
+            dataxn+=']';
+            if(dataxn.length>2){
+                $.ajax({
+                    async:false,
+                    type:"GET",
+                    data:{'data':dataxn,'env':'prd'},//生产加参数
+                    dataType:"jsonp",
+                    jsonp: "jsoncallback",
+                    url:'//crm.ule.com/im2xn/merchant/getMerchantLoginStatus',
+                    success:function(d){
+                        if(d.code=='0000'&&d.data!=null){
+                            for(var i=0;i<d.data.length;i++){
+                                var m=spanchat.eq(i);
+                                if(d.data[i].isOpenWhiteList){
+                                    m.addClass('xiaoneng');
+                                    m.attr('isOpen',d.data[i].isOpenWhiteList);//白名单状态
+                                    if(d.data[i].status=='1'){
+                                        m.attr('status',d.data[i].status);//状态
+                                        m.attr('settingId',d.data[i].settingId);//settingId
+                                        m.html('<em class="online ccc"></em>');
+                                        $('.chatbar-service').attr('settingid',d.data[i].settingId);
+                                    }
+                                    else{
+                                        m.addClass('noXN');
+                                        m.attr('status',d.data[i].status),//状态
+                                            m.attr('settingId',d.data[i].settingId);//settingId
+                                        m.html('<em class="offline"></em>');
+                                    }
+                                    m.removeClass('plg-livechat-kefu');
+                                }
+                            }
+                        }
+                        if($('.xiaoneng').length){
+                            $('.xiaoneng').live('click',function(){
+                                var m = $(this),
+                                    storeId  = m.attr('storeid'),
+                                    merchantId=m.attr('merchantId'),
+                                    kfstatus = m.attr('status'),
+                                    settingid= m.attr('settingid'),
+                                    itemid =m.attr('listingid')!=null?m.attr('listingid'):m.attr('itemid'),
+                                    uid,uname,sellerid = 'lw_'+merchantId;
+                                if(window.location.href.indexOf('search')!=-1||window.location.href.indexOf('store')!=-1){
+                                    uid=JEND.page.header.data.cookie.uid;
+                                    uname=JEND.page.header.data.cookie.name;
+                                }
+                                else{
+                                    uid=userId;
+                                    uname = userName;
+                                }
+                                if(JEND.login.checkUserStatus()){//判定是否登陆
+                                    initXiaoNeng(uid,uname,sellerid,settingid,itemid);
+                                }else{
+                                    JEND.login.pop(function(d){//重新获取信息，再次请求
+                                        $.getJSON(document.location.protocol + '//my.' + JEND.server.uleUrl + '/usr/getIndexCookies.do?jsonCallBack=?', function(data) {
+                                            JEND.login.userData = data;
+                                            uid=data.useronlyid;
+                                            uname =data.loginname;
+                                            initXiaoNeng(uid,uname,sellerid,settingid,itemid);
+                                        });
+                                    });
+                                }
+                            });
+                        }
+                        if ($('span.plg-livechat-kefu').length>0) {
+                            othis.insertModule({
+                                align: 'middle',
+                                keyname: 'livechat',
+                                title: '联系卖家',
+                                modView: 'bottom',
+                                needLogin: true,
+                                onFinish: function(tab, mod) {
+                                    // 由于和页面上的内容处理有关联，模块添加后就需要初始化
+                                    tab.element.hide();
+                                    mod.initView();
+                                }
+                            });
+                            othis.insertModule({
+                                align: 'middle',
+                                keyname: 'contact',
+                                title: '最近联系人',
+                                onFinish: function(tab, mod) {
+                                    tab.element.hide();
+                                }
+                            });
+                        }
+                    }
+                });
+            }
+
+            //调用小能客服
+            function initXiaoNeng(uid,uname,sellerid,settingid,itemid){
+                //小能客服
+                JEND.load('//dl.ntalker.com/js/b2b/ntkfstat.js?siteid=lw_1000',function(){
+                    window.NTKF_PARAM = {
+                        siteid : "lw_1000", //固定值,"lw_1000"
+                        sellerid : sellerid, //小能商户ID,格式为 "lw_${邮乐商家ID}"
+                        //157:店铺id,4061:商家id,0:客服类型 (0:售前 1:售后)
+                        settingid : settingid, //客服接待组配置ID，决定了页面建立的小能对话，由哪些客服负责服务。
+                        uid : uid, //买家用户ID
+                        uname : uname, //买家用户名
+                        isvip : "0", //0:非VIP用户,1:VIP用户;邮乐买家无VIP等级,这里固定值为0
+                        userlevel : "1", //邮乐买家无会员等级,这里固定值为1
+                        itemid : itemid, //商品ListID
+                        itemparam : "0" //商品区分扩展参数，0 ：邮乐大网商品  1：邮储积分商品
+                    }
+
+                    if(window.location.href.indexOf('store')!=-1||window.location.href.indexOf('shop')!=-1){//店铺页
+                        window.NTKF_PARAM = {
+                            siteid : "lw_1000", //固定值,"lw_1000"
+                            sellerid : sellerid, //小能商户ID,格式为 "lw_${邮乐商家ID}"
+                            //157:店铺id,4061:商家id,0:客服类型 (0:售前 1:售后)
+                            settingid : settingid, //客服接待组配置ID，决定了页面建立的小能对话，由哪些客服负责服务。
+                            uid : uid, //买家用户ID
+                            uname : uname, //买家用户名
+                            isvip : "0", //0:非VIP用户,1:VIP用户;邮乐买家无VIP等级,这里固定值为0
+                            userlevel : "1", //邮乐买家无会员等级,这里固定值为1
+                        }
+                    }
+                    window.NTKF.im_openInPageChat(settingid);
+                    return false;
+                });
+            }
+            //添加调用小能客服 end
+
+            this.insertModule({
+                align: 'bottom',
+                keyname: 'iFavorite',
+                title: '我的收藏',
+                modView : false,
+                onFinish: function(tab, mod) {
+                    tab.element.find(".jui-ubar-tab-tips").wrap('<a href="//my.' + JEND.server.uleUrl + '/myfavor/favoriteListingTagsShow.action" target="_blank"></a>');
+                }
+            });
+            this.insertModule({
+                align: 'bottom',
+                keyname: 'iHelp',
+                title: '我要帮忙',
+                modView : false,
+                onFinish: function(tab, mod) {}
+            });
+            this.insertModule({
+                align: 'bottom',
+                keyname: 'iRomantic',
+                title: '显示奖金',
+                modView : false,
+                onFinish: function(tab, mod) {
+                    var num = 0, timeId, $isVI = $(".isVIpage");
+                    var _show = function() {
+                        num = 5;
+                        $(".rTab").css("display", "inline-block").siblings(".price").find(".imaxPrice").hide();
+                        if ($isVI.length) {
+                            $isVI.css({"clear" : "left"});
+                        }
+                    };
+                    var _hide = function() {
+                        num = 0;
+                        clearInterval(timeId);
+                        $(".rTab").css({"display" : "none"}).siblings(".price").find(".imaxPrice").show();
+                        $isVI.css({"clear" : "none"});
+                    };
+                    var _onClick = function() {
+                        if (num > 0) { return; }
+                        _show();
+                        timeId = setInterval(function() {
+                            if ((--num) <= 0) { _hide(); }
+                        }, 1000);
+                    };
+                    $().keydown(function(event) {
+                        if (event.ctrlKey && event.keyCode == 113) {
+                            if (JEND.login.checkUserStatus() && JEND.cookie.get("groupId") == "71") {
+                                (num > 0) ? _hide() : _onClick();
+                            }
+                        }
+                    });
+                    tab.element.find(".jui-ubar-tab-tips").click(function() {
+                        _onClick();
+                    });
+                }
+            });
+            var isDgLogin = (function() {
+                var $pIFavorite = $(".jui-ubar-tab-iFavorite").parent();
+                var $pIHelp = $(".jui-ubar-tab-iHelp").parent();
+                var $pIRomantic = $(".jui-ubar-tab-iRomantic").parent();
+                return function() {
+                    if (JEND.login.checkUserStatus() && JEND.cookie.get("groupId") == "71") {
+                        $pIFavorite.show();
+                        $pIHelp.show();
+                        $pIRomantic.show();
+                    } else {
+                        $pIFavorite.hide();
+                        $pIHelp.hide();
+                        $pIRomantic.hide();
+                    }
+                };
+            })();
+            isDgLogin();
+            setTimeout(function() {
+                isDgLogin();
+            }, 1000);
+
+            this.insertModule({
+                align: 'bottom',
+                keyname: 'gotop',
+                title: '回到顶部',
+                onFinish: function(tab, mod) {
+                    tab.element.hide();
+                    tab.element.click(function() {
+                        $('html, body').animate({scrollTop:0}, 300);
+                    });
+                    tab.element.bind('pageScroll', function() {
+                        var element = $(this);
+                        if ($(document).scrollTop()<=100) {
+                            if (element.attr('status')=='show') element.attr('status','hide').fadeOut();
+                        } else {
+                            if (element.attr('status')!='show') element.attr('status','show').fadeIn();
+                        }
+                    });
+                    $(window).scroll(function() {
+                        tab.element.trigger('pageScroll');
+                    });
+                    tab.element.trigger('pageScroll');
+                }
+            });
+            // 快速登录模块
+            this.insertModule({
+                keyname: 'login',
+                modView: 'float',
+                onInit: function(tab, mod) {
+                    var loginUrl = '//my.'+ JEND.server.uleUrl +'/usr/fastSslogion.do?callback=parent.JEND.ubar.loginSuccess';
+                    mod.showLoading();
+                    mod.element.append('<div class="jui-ubar-mod-login"><iframe name="miniLogin" src="'+ loginUrl +'" width="280" height="260" frameborder="0" scrolling="no"></iframe></div>');
+                    JEND.page.setDomain();
+                    JEND.ubar.setLoginSuccess(function() {
+                        mod.switchView();
+                        if ($('span.plg-livechat-kefu').length>0) {
+                            $('.chatbar-contact ul li[data-jid="'+JEND.livechat.base.currentOpenedContact+'"]').find('em').html('...').attr('style', 'display:block;');
+                            if (JEND.livechat.base.checkLogin()&&tab.element.find('.jui-ubar-tab-livechat').length) {
+                                JEND.livechat.data.serviceButton.getValidButtons()[0].button.eq(0).click();
+                            }
+                        }
+                    });
+                    JEND.ubar.loginSuccess();
+                }
+            });
+            //优惠券提示模块
+            this.insertModule({
+                keyname: 'coupon',
+                modView: 'float',
+                onFinish: function(tab, mod) {
+                    var couponUrl = "//store." + JEND.server.uleUrl + "/merchatCouponAction.do?jsonpcallbck=?";
+                    if(storeId){
+                        $.getJSON(couponUrl,{storeId:storeId?storeId:'',method:'ajaxGetCouponList'},function(o){
+                            if(o.length){
+                                $(".jui-ubar-tab-mycoupon").parent().addClass('jui-ubar-tab-active');
+                                mod.element.append('<div class="jui-ubar-mod-coupon"><p>该店铺可领优惠券</p><a id="getCp">立即领取</a></div>').show().css({position:'absolute',top:$(".jui-ubar-tabs-middle")[0].offsetTop+119,width:'260px',height:'190px'});
+                                $("#getCp").click(function(){
+                                    $(".jui-ubar-tab-mycoupon").trigger('click').trigger('click');
+                                });
+                            }
+                        });
+                    }
+                }
+            });
+        },
+        // 插入单个ubar功能模块
+        insertModule: function(data) {
+            if (this.hideMods[data.keyname]) {
+                return false;
+            }
+            if (data.title) {
+                data.tabElm = $(this.tmpl.modtab.substitute(data));
+                data.tabElm.appendTo(this.container.find('.jui-ubar-tabs-'+ data.align));
+            };
+            if (data.modView) {
+                data.modElm = $(this.tmpl.modbody.substitute(data));
+                data.modElm.appendTo(this.container.find('.jui-ubar-mods'));
+            }
+            this.mods[data.keyname] = new UbarModClass(data);
+        },
+        //-----------------
+        // 隐藏打开的功能模块
+        hideAllModule: function() {
+            for (var keyname in this.mods) {
+                this.mods[keyname].hide();
+            }
+        },
+        // 更新ubar状态（目前只有mini时需要处理）
+        updateStatus: function() {
+            if (this.container.hasClass('jui-ubar-mini')) {
+                if (this.container.find('.jui-ubar-tab-active').length > 0) {
+                    this.container.addClass('jui-ubar-mini-active');
+                } else {
+                    this.container.removeClass('jui-ubar-mini-active');
+                }
+            }
+        },
+        //-----------------
+        // 登录后返回
+        setLoginSuccess: function(callback) {
+            this.loginSuccessCallback = callback;
+        },
+        loginSuccess: function() {
+            if (this.loginSuccessCallback) {
+                this.loginSuccessCallback();
+            }
+        }
+    }, function() {
+        JEND.namespace('JEND.page.header.cart');
+        JEND.page.header.cart.bindEvent = function() {
+            var that = this;
+            this.container.find('.shopcart-sum').click(function() {
+                that.gotoCart('newwin', this);
+                return false;
+            });
+        };
+        JEND.page.header.cart.float = function() {};
+        JEND.page.header.cart.update = function() {};
+
+        var offlineuserName='',
+            offlineuserid='',
+            inter=setInterval(getCustomerofflineCount,20000) ;
+        function getCustomerofflineCount(){
+            var c=unescape(JEND.cookie.get('infoValue')),
+                a=c.split('&');
+            for(var i=0;i<a.length;i++){
+                var n=a[i].split('=');
+                if(n[0]=='userId'){
+                    offlineuserid=n[1];
+                }
+            }
+            offlineuserName=JEND.cookie.get('offlineuserid');
+            if(offlineuserName){
+                if (JEND.login.checkUserStatus() || !JEND.livechat) {
+                    clearInterval(inter);
+                } else {
+                    var messagecount = 0;
+                    $.getJSON(JEND.livechat.data.apis.customer.offlineCount + '&userName=' + offlineuserName+'&type=ule', function(o) {
+                        if(o.offlineCount){
+                            $('.jui-ubar-tab-livechat').find('em').removeClass().addClass('msgtip').show();
+                        }
+                    });
+                }
+            }else{
+                if(c){
+                    JEND.cookie.set('offlineuserid',offlineuserid,{day:31});
+                    clearInterval(inter);
+                }
+            }
+        }
+
+    });
+    //---------------------
+    $(document).ready(function() {
+        JEND.ubar.init();
+        //增加优惠券功能js
+        var globalDom = $(parent.window.document.body);
+        if (globalDom.find("#global_coupon").length == 0) {
+            //globalDom.append('<script type="text/javascript" src="//i0.ulecdn.com/j/ule/coupon/coupon.js" id="global_coupon"></script>');
+            JEND.load.add('couponJS', {
+                js: '//i0.ulecdn.com/j/ule/coupon/coupon.js'
+            });
+            JEND.load('couponJS');
+        }
+
+    });
+    //---------------------
+})(jQuery);

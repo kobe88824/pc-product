@@ -1,0 +1,975 @@
+
+*{
+    font-family: 'microsoft yahei';
+}
+.header{
+    width: 100%;
+    min-width: 1200px;
+    height: 180px;
+    color: #666;
+}
+.header .header-top {
+    width: 100%;
+    height: 36px;
+    background-color: #f7f7f7;
+    position: relative;
+    z-index: 1001;
+    border-bottom: 1px solid #ededed;
+  }
+  .header  .header-tap-content{
+      width: 1200px;
+      height: 36px;
+      margin: 0 auto;
+  }
+  .header .home-logo{
+      width: 16px;
+      height: 16px;
+      margin-top: 10px;
+      float: left;
+      background: url(../images/ovp/2.png) no-repeat 0 0;
+  }
+  .header .home-page{
+      line-height: 36px;
+      margin-left: 5px;
+      float: left;
+      letter-spacing: 2px;
+      /* margin-top: 12px; */
+  }
+  .header a{
+    text-decoration: none;
+  }
+  .header .fl{
+      float: left;
+  }
+  .header .clearfix:after{
+      content: '.';
+      height: 0;
+      visibility: hidden;
+      display: block;
+      clear: both;
+  }
+  .header .rl{
+      float: right;
+  }
+  .header .rl li{
+      float: left;
+      margin-left: 15px;
+      line-height: 36px;
+  }
+  .header .userinfo{
+      width: 108px;
+      height: 36px;
+      position: relative;
+  }
+  .header .select-lf-logo{
+      width: 16px;
+      height: 16px;
+      margin-top: 3px;
+  }
+  .header .txt-down{
+      margin-left: 5px;
+  }
+  .header .userinfo ul{
+      width: 95px;
+    display: none;
+    height: auto;
+    position: absolute;
+    top: 0px;
+    left: -3px;
+    
+    border: solid 1px #d9d9d9;
+    /* border-top: none; */
+    background-color: #fff;
+
+    
+  }
+  .header .userinfo ul a{
+    color: #666;
+    font-size: 14px;
+  }
+  .header .phone-logo{
+      margin-left: 15px;
+      margin-top: 2px;
+  }
+  .header .phone-txt{
+    float: left;
+    width:95px;
+    height: 36px;
+    line-height: 36px;
+}
+.header .header-main{
+    width: 1200px;
+    margin: 0 auto;
+    height: 100px;
+}
+.header .header-main-logo{
+    margin-top: 12.5px;
+    float: left;
+    
+}
+.header .header-main-logo a{
+    display: inline-block;
+    background: url(../images/ovp/57.png) no-repeat;
+    width: 75px;
+    height: 75px;
+}
+.header .search-box{
+    width: 533px;
+    height: 36px;
+    float: left;
+}
+.header .header-main-search{
+    width: 611px;
+    float: left;
+    /* margin-top: 25px; */
+    margin: 25px 171px ;
+    position: relative;
+}
+.header .search-box input{
+    width: 533px;
+    height: 28px;
+    float: left;
+    border: 4px solid #4871d2;
+}
+.header .search-hotkeys a{
+    color: #666;
+}
+.header .search-box-logo{
+    width: 78px;
+    height: 36px;
+    background: url(../images/ovp/12.png) no-repeat 0 0;
+    float: left;
+    background-position: -370px -169px;
+}
+.header-main .search-list{
+    position: absolute;
+    top: 36px;
+    left: 0;
+    padding: 0;
+    width:532px;
+    border: solid 1px #dfdfdf;
+    background: #fff;
+    z-index: 6;
+    box-shadow: 1px 1px 3px #dfdfdf;
+}
+.header-main .search-list li{
+    padding: 3px 8px 4px 8px;
+    line-height: 26px;
+    cursor: pointer;
+    margin: 0;
+    display: block;
+    clear: both;
+    overflow: hidden;
+    color: #666;
+}
+.header-main .search-list span{
+    color: #222;
+}
+.header-main .search-list li:hover{
+    background-color: #f3f3f3;
+}
+.header-main .search-list li:hover .fl{
+    color: #c51010;
+}
+.header .header-main-shopcar{
+    float: left;
+    margin-top: 25px;
+    width: 170px;
+    height: 34px;
+    /* background-position: 0 -86px; */
+    border: 1px solid #E6E6E6;
+    background-color: #f6f6f6;
+    /* z-index: 901; */
+}
+.header .shopcar-logo{
+    height: 20px;
+    float: left;
+    margin-top: 7px;
+    margin-left: 4px;
+}
+.header .shopcar-num{
+    color: #4871d2;
+    display: inline-block;
+    font-size: 16px;
+    line-height: 20px;
+    margin-top: 8px;
+    margin-right: 10px;
+    margin-left: 30px;
+}
+.header .shop-num-down img{
+    margin-top: 9px;
+}
+.header .head-nav {
+    height: 39px;
+    border-top: 1px solid #878787;
+    /* position: relative; */
+    width: 100%;
+    margin-top: 1px;
+}
+.header .layout{
+    width: 1200px;
+    height: 39px;
+    margin: 0 auto;
+}
+.header .navigation{
+    width: 100%;
+    height: 39px;
+}
+.header .ovp-home{
+    width: 190px;
+    height: 39px;
+    float: left;
+    background: #000;
+}
+.header .ovp-home a{
+    display: inline-block;
+    width: 190px;
+    height: 39px;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 39px;
+    text-align: center;
+    color: #666;
+}
+.header .navigation a{
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 39px;
+    text-align: center;
+    color: #666;
+}
+.header .li-common{
+    width: 125px;
+    height: 39px;
+    float: left;
+    font-size: 16px;
+    font-weight: 600;
+}
+.header .oz-logo{
+    /* display: inline-block; */
+    width: 32px;
+    height: 20px;
+    background: url(../images/ovp/6.png);
+    background-position: 0 0px;
+    float: left;
+    margin-top: 12px;
+    margin-left: 22px;
+}
+.header .oz-logo2{
+    /* display: inline-block; */
+    width: 32px;
+    height: 20px;
+    background: url(../images/ovp/6.png);
+    background-position: 0 -60px;
+    float: left;
+    margin-top: 12px;
+    margin-left: 22px;
+}
+.header .oz-logo3{
+    /* display: inline-block; */
+    width: 32px;
+    height: 20px;
+    background: url(../images/ovp/6.png);
+    background-position: 0 -120px;
+    float: left;
+    margin-top: 12px;
+    margin-left: 6px;
+}
+.header .oz-logo4{
+    /* display: inline-block; */
+    width: 32px;
+    height: 20px;
+    background: url(../images/ovp/6.png);
+    background-position: 0 -150px;
+    float: left;
+    margin-top: 12px;
+    margin-left: 14px;
+}
+.header .oz-logo5{
+    /* display: inline-block; */
+    width: 32px;
+    height: 20px;
+    background: url(../images/ovp/6.png);
+    background-position: 0 -180px;
+    float: left;
+    margin-top: 12px;
+    margin-left: 22px;
+}
+.header .oz-logo6{
+    /* display: inline-block; */
+    width: 32px;
+    height: 16px;
+    background: url(../images/ovp/6.png);
+    background-position: 0px 17px;
+    float: left;
+    margin-top: 12px;
+    margin-left: 6px;
+}
+.header .oz-logo7{
+    /* display: inline-block; */
+    width: 24px;
+    height: 16px;
+    background: url(../images/ovp/ydyl.jpg);
+    background-position: 0px 17px;
+    float: left;
+    margin-top: 12px;
+    margin-left: 18px;
+}
+.header .login a{
+    color: #06c;
+    cursor: default;
+}
+/*登录模块  开始*/
+.header .ceng{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    display: none;
+    cursor: default;
+    z-index: 23;
+}
+.header .ceng .login-register{
+    width: 240px;
+    /* height: 180px; */
+    background-color: #fff;
+    /* border-radius: 10px; */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -150px;
+    margin-top: -150px;
+    padding: 10px 30px 50px;
+}
+
+.header .login-register-tab1{
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+    margin:0 10px 10px;
+}
+
+.header .err1,.header .err2{
+    color: #a71b1c;
+    visibility: hidden;
+}
+.header .user,.header .pwd{
+    width: 235px;
+    height: 35px;
+    padding-left: 5px;
+    outline: none;
+    border: none;
+    border: 1px solid #bdbdbd;
+    background-color: #ddd;
+}
+.header .err2{
+    display: inline-block;
+    margin-bottom: 10px;
+}
+.header .findPWD{
+    margin-left: 30px;
+}
+.header .ceng button{
+    width: 240px;
+    height: 35px;
+    margin-top: 20px;
+    /* border-radius: 35px; */
+    background-color: #a71b1c;
+    outline: none;
+    border:none;
+    color: #fff;
+    font-size: 18px;
+}
+
+.header .exit-button{
+    display: none;
+}
+/*登录模块  结束*/
+.catalog{
+    width: 100%;
+    min-width: 1200px;
+    margin-top: -2px;
+}
+.catalog .catalog-main{
+    width: 1200px;
+    margin: 0 auto;
+}
+.catalog .sort{
+    width: 190px;
+    height: 360px;
+    float: left;
+    background: #2c2c2c;
+    color: #fff;
+    
+}
+.catalog .sort-list{
+    width: 100%;
+    
+}
+.catalog .product{
+    width: 50%;
+    height: 90px;
+    border-bottom: 1px solid #000;
+    float: left;
+}
+.catalog .sort .product a{
+    display: inline-block;
+    width: 100%;
+    height: 90px;
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    line-height: 140px;
+    text-decoration: none;
+}
+.catalog .lvse{
+    background: url(../images/ovp/4.png) no-repeat 0 0;
+    background-position: 0 15px;
+}
+.catalog .sort a{
+    text-decoration: none;
+}
+.catalog .sort .product a span{
+    /* margin-left: 20px; */
+    /* font-weight: bold; */
+    color: #fff;
+}
+.catalog .meizhuang{
+    background: url(../images/ovp/4.png) no-repeat 0 0;
+    background-position: -95px 15px;
+}
+.catalog .muying{
+    background: url(../images/ovp/4.png) no-repeat 0 0;
+    background-position: 0px -70px;
+}
+.catalog .jkms{
+    background: url(../images/ovp/4.png) no-repeat 0 0;
+    background-position: -95px -70px;
+}
+.catalog .cwxl{
+    background: url(../images/ovp/4.png) no-repeat 0 0;
+    background-position: 0px -155px;
+}
+.catalog .swlp{
+    background: url(../images/ovp/4.png) no-repeat 0 0;
+    background-position: -95px -155px;
+}
+.catalog .banner {
+	width:770px;
+    height:350px;
+    float: left;
+    margin-top: 10px;
+	position:relative;
+	overflow:hidden;
+	/* margin:50px auto; */
+}
+.catalog .box { 
+	height:350px;
+	position:relative;
+}
+.catalog .box div {
+	width:770px;
+	height:350px;
+	position:absolute;
+	top:0;
+	left:0;
+	opacity:0;
+	transform:1.5s;
+	-moz-transition:1.5s;
+	-webkit-transition:1.5s;
+}
+.catalog .box div.active {
+	opacity:1;
+}
+.catalog .box div img {
+	width:100%;
+	height:100%;
+	display:block;
+}
+.catalog .next {
+	position: absolute;
+    top: 50%;
+    margin-top: -24px;
+    left: 20px;
+    height: 48px;
+    width: 48px;
+    background: url(../images/ovp/rmjt.png) no-repeat;
+}
+.catalog .prev {
+	position: absolute;
+    top: 50%;
+    margin-top: -24px;
+    right: 20px;
+    height: 48px;
+    width: 48px;
+    background: url(../images/ovp/rmjt.png) no-repeat;
+    background-position:  -48px 0px;
+}
+.catalog .Dots {
+	position:absolute;
+	bottom:30px;
+	right:50px;
+}
+.catalog .Dots a {
+	width:10px;
+	height:10px;
+	float:left;
+	display:block;
+	background-color:rgba(102,215,255,0.7);
+	margin-left:8px;
+	border-radius:50%;
+}
+.catalog .Dots a.active {
+	background-color:white;
+}
+.catalog .recommend{
+    width: 228px;
+    height: 338px;
+    margin-top: 10px;
+    float: left;
+    padding: 6px;
+}
+.catalog .recommend-top{
+    padding-top: 5px;
+    height: 80px;
+    border-bottom: 1px dotted #ccc;
+    
+}
+.catalog .recommend-top .gonglve{
+    float: left;
+    width: 76px;
+    height: 70px;
+    background: url(../images/ovp/6.png) no-repeat;
+    background-position: -106px 10px;
+}
+.catalog .recommend-top a{
+    display: inline-block;
+    width: 76px;
+    height: 70px;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    line-height: 120px;
+}
+.catalog .recommend-top .baozhang{
+    float: left;
+    width: 76px;
+    height: 70px;
+    background: url(../images/ovp/6.png) no-repeat;
+    background-position: -106px -53px;
+}
+.catalog .recommend-top .koubei{
+    float: left;
+    width: 76px;
+    height: 70px;
+    background: url(../images/ovp/6.png) no-repeat;
+    background-position: -106px -123px;
+}
+.catalog .life{
+    width: 100%;
+    height: 55px;
+    border-bottom: 1px solid #666;
+    
+}
+.catalog .life-list div{
+    width: 76px;
+    height: 40px;
+    border-bottom: 2px solid transparent;
+    float: left;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 40px;
+    margin-top: 15px;
+}
+.catalog .details{
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+.catalog .details .kong-box{
+     width: 700px; 
+    /* height: 198px;  */
+    overflow: hidden;
+}
+.catalog .details .kong-box .a,.b,.c{
+    float: left;
+    width: 228px;
+    height: 198px;
+}
+.catalog .details .kuai{
+    width: 100%;
+    height: 198px;
+    /* position: absolute;
+    top: 0;
+    left: 0; */
+    /* float: left; */
+    
+}
+.catalog .details li a{
+    font-size: 15px;
+    color: #666;
+}
+.catalog .details li{
+    overflow: hidden;
+    width: 100%;
+    height: 33px;
+    /* text-align: center; */
+    line-height: 33px;
+    
+}
+.catalog .details .kuai li div{
+    float: left;
+    width: 5px;
+    height: 5px;
+    background: #666;
+    margin: 15px 10px 15px 6px;
+}
+.hot-commodity{
+    width: 1200px;
+    height: 410px;
+    margin: 0 auto;
+    /* background: #000; */
+    margin-top: 20px;
+}
+.hot-commodity .hot-title{
+    font-size: 22px;
+    color: #000;
+    font-weight: 500;
+    font-family: 'microsoft yahei';
+    padding: 5px 0;
+    border-bottom: 1px solid #e9e9e9;
+}
+.hot-commodity .hot-title span{
+    font-size: 12px;
+    color: #999;
+}
+.hot-commodity .hot-banner{
+    width: 100%;
+    height: 350px;
+    border: 1px solid #999;
+    position: relative;
+    overflow: hidden;
+}
+.hot-commodity .hezi{
+    width: 3606px;
+    height: 350px;
+}
+.hot-commodity .hot-banner-box{
+    float: left;
+}
+.hot-commodity .hot-banner .hot-banner-item{
+    width: 200px;
+    padding: 15px;
+    margin-left: 8px;
+    margin-top: 35px;
+    float: left;
+}
+.hot-commodity .hot-banner .hot-banner-item a,span{
+    color: #666;
+    font-size: 14px;
+}
+.hot-commodity .hot-banner .hot-banner-item strong{
+    font-size: 24px;
+    font-weight: normal;
+    padding-left: 4px;
+}
+.hot-commodity .hot-left{
+    position: absolute;
+    top: 50%;
+    margin-top: -24px;
+    left: 20px;
+    height: 48px;
+    width: 48px;
+    background: url(../images/ovp/rmjt.png) no-repeat;
+}
+.hot-commodity .hot-right{
+    position: absolute;
+    top: 50%;
+    margin-top: -24px;
+    right: 20px;
+    height: 48px;
+    width: 48px;
+    background: url(../images/ovp/rmjt.png) no-repeat;
+    background-position:  -48px 0px;
+}
+.layout{
+    width: 1200px;
+    margin: 0 auto;
+}
+.layout .hot-title{
+    font-size: 22px;
+    color: #000;
+    font-weight: 500;
+    font-family: 'microsoft yahei';
+    padding: 5px 0;
+    border-bottom: 1px solid #e9e9e9;
+}
+.layout .merchant-recommend{
+    float: left;
+    width: 930px;
+}
+.layout .hot-title span{
+    font-size: 12px;
+    color: #999;
+}
+.layout .ranking{
+    width: 240px;
+    float: left;
+    margin-left: 30px;
+}
+.layout .merchant-recommend a{
+    /* display: inline-block; */
+    float: left;
+    margin: 15px 10px 0 10px;
+}
+.layout .ranking-item{
+    width: 100%;
+    margin-top: 15px;
+}
+.layout .ranking-item li{
+    /* padding: 8px 0 8px 28px; */
+    border-bottom: dotted 1px #ccc;
+    margin-bottom: 10px;
+}
+.layout .ranking-item .tu{
+    float: left;
+    width: 16px;
+    height: 16px;
+    background: url(../images/ovp/ZS排行2.png);
+    color: #f6f6f6;
+    line-height: 16PX;
+    text-align: center;
+}
+.layout .ranking-item .introduce{
+    width: 140px;
+    margin: 0 12px;
+    float: left;
+}
+.layout .ranking-item .introduce a{
+    color: #999;
+    
+}
+.layout .ranking-item .introduce .p-logo{
+    width: 60px;
+    height: 60px;
+    float: left;
+}
+.layout .ranking-item .tu2{
+    float: left;
+    width: 16px;
+    height: 16px;
+    background: url(../images/ovp/ZS排行4.png);
+    color: #f6f6f6;
+    line-height: 16PX;
+    text-align: center;
+}
+.layout .ranking-item .tu3{
+    float: left;
+    width: 16px;
+    height: 16px;
+    background: url(../images/ovp/ZS排行5.png);
+    color: #f6f6f6;
+    line-height: 16PX;
+    text-align: center;
+}
+.layout .ranking-item .tu4{
+    float: left;
+    width: 16px;
+    height: 16px;
+    background: url(../images/ovp/ZS排行3.png);
+    color: #f6f6f6;
+    line-height: 16PX;
+    text-align: center;
+}
+.section{
+    width: 100%;
+    min-width: 1200px;
+    height: 750px;
+    background: #ffefe1;
+    margin-top: 50px;
+}
+.section .section-main{
+    width: 1200px;
+    margin: 0 auto;
+}
+.section .more-import{
+    display: inline-block;
+    width: 100%;
+    height: 50px;
+    background: url(../images/ovp/tuijian.jpg) no-repeat;
+    margin-top: 10px;
+    background-position: 0px 0px;
+}
+.section .section-banner-item{
+    width: 200px;
+    padding: 15px;
+    margin-left: 8px;
+    margin-top: 15px;
+    float: left;
+    background: #fff;
+}
+.section .section-banner-item a,span{
+    color: #666;
+    font-size: 14px;
+}
+.section .section-banner-item strong{
+    font-size: 24px;
+    font-weight: normal;
+    padding-left: 4px;
+}
+.section .prodcut-name{
+    height: 40px;
+    line-height: 20px;
+    overflow: hidden;
+}
+
+
+
+
+.direct-mail{
+    width: 100%;
+    min-width: 1200px;
+    height: 750px;
+    background: #ddefff;
+    margin-top: 50px;
+}
+.direct-mail .direct-mail-main{
+    width: 1200px;
+    margin: 0 auto;
+}
+.direct-mail .more-import{
+    display: inline-block;
+    width: 100%;
+    height: 50px;
+    background: url(../images/ovp/tuijian.jpg) no-repeat;
+    margin-top: 10px;
+    background-position: 0px -52px;
+}
+.direct-mail .direct-mail-banner-item{
+    width: 200px;
+    padding: 15px;
+    margin-left: 8px;
+    margin-top: 15px;
+    float: left;
+    background: #fff;
+}
+.direct-mail .direct-mail-banner-item a,span{
+    color: #666;
+    font-size: 14px;
+}
+.direct-mail .sectdirect-mailion-banner-item strong{
+    font-size: 24px;
+    font-weight: normal;
+    padding-left: 4px;
+}
+.direct-mail .prodcut-name{
+    height: 40px;
+    line-height: 20px;
+    overflow: hidden;
+}
+.direct-mail .oz-logo{
+    /* display: inline-block; */
+    width: 32px;
+    height: 20px;
+    background: url(../images/ovp/6.png);
+    background-position: 0 -223px;
+    float: left;
+}
+.direct-mail .box{
+   height:20px ;
+}
+.footer{
+    width: 100%;
+    min-width: 1200px;
+    height: 260px;
+}
+.footer .footer-content{
+    width: 1200px;
+    margin: 0 auto;
+    margin-top: 80px;
+    padding: 10px 0 20px;
+    text-align: left;
+    background: url(../images/ovp/bom_01.jpg) no-repeat right bottom;
+    border-bottom: 1px solid #E9E9E9;
+    margin-bottom: 20px;
+}
+.footer .greenhand{
+    width: 170px;
+    padding: 15px 10px 10px;
+    float: left;
+}
+.footer .footer-top{
+    width: 135px;
+    display: inline-block;
+    font-size: 14px;
+    color: #666;
+    line-height: 18px;
+    margin: 0 0 10px;
+    border-bottom: 1px dotted #CCCCCC;
+    padding-bottom: 5px;
+    font-weight: bold;
+}
+.footer .footer-liem a{
+    line-height: 22px;
+    color: #888
+}
+.footer .address{
+    width: 245px;
+    float: right;
+}
+.footer .address .a{
+    margin-bottom: 30px;
+}
+.footer .footer-icon{
+    width: 1200px;
+    margin: 0 auto;
+}
+.footer .bottom1{
+    display: inline-block;
+    width: 100px;
+    height: 35px;
+    background: url(../images/ovp/10.png);
+    background-position: 0px 0px;
+    margin-left: 5px;
+}
+.footer .bottom2{
+    display: inline-block;
+    width: 100px;
+    height: 35px;
+    background: url(../images/ovp/10.png);
+    background-position: -118px 0px;
+    margin-left: 5px;
+}
+.footer .bottom3{
+    display: inline-block;
+    width: 100px;
+    height: 35px;
+    background: url(../images/ovp/10.png);
+    background-position: -234px 0px;
+    margin-left: 5px;
+}
+.footer .bottom4{
+    display: inline-block;
+    width: 100px;
+    height: 35px;
+    background: url(../images/ovp/10.png);
+    background-position: -352px 0px;
+    margin-left: 5px;
+}
+.footer .bottom5{
+    display: inline-block;
+    width: 100px;
+    height: 35px;
+    background: url(../images/ovp/10.png);
+    background-position: 100px 0px;
+    margin-left: 5px;
+}
+
+
+
+
+
+
+

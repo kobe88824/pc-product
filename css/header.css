@@ -1,0 +1,298 @@
+img{
+    vertical-align: middle;
+}
+a{
+    color: #666;
+}
+.m{
+    vertical-align: middle
+}
+
+/* ======================头部 */
+
+.header{
+    width: 100%;
+    min-width: 1200px;
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #ededed;
+    position: relative;
+    color: #666;
+    z-index: 23;
+
+}
+.header a{
+    color: #666;
+    
+}
+.header .login a,
+.header .user-name{
+    color: #06c;
+    cursor: default;
+}
+
+.header-content{
+    width: 1200px;
+    height: 29px;
+    margin: 0 auto;
+    padding-top:10px;
+}
+.header-left{
+    float: left;
+}
+.header-right{
+    float: right;
+}
+.header-right >ul>li{
+    float: left;
+}
+.header .js_down-app,.header .js_myaccount,.header .site-map-box,.header .js_help-center,.header .call-box {
+    position: relative; 
+}
+
+.header-home{
+    padding: 3px 20px;
+    background:url(../images/index/ico_return-home.png) 0 0 no-repeat;
+}
+.header .phone{
+    padding-left: 15px;
+    background:url(../images/index/header_1407.png) 0 0 no-repeat;
+}
+.header .ico-all-class{
+    padding-left: 20px;
+    background:url(../images/index/header_1407.png) -322px 0 no-repeat;
+}
+.header .ico-call{
+    padding-left: 20px;
+    background:url(../images/index/call.png) 0 0 no-repeat;
+}
+.header .line::before{
+    content: '';
+    border-left: 1px solid #ededed;
+}
+.header .header-right .login{
+    padding: 0 10px;
+}
+.header .myaccount,.header .phone-box,.header .all-class,.header .site-map,.header .help-center,.header .call{
+    padding: 0 10px;
+    border: 1px solid transparent;
+    background-color: #f7f7f7;
+    position: absolute;
+    top: 0px;
+}
+
+.header .js_myaccount,.header .js_help-center,.header .site-map-box,.header .call-box{
+    width: 81.5px;
+}
+
+.header .myaccount,.header .help-center{
+    position: absolute;
+}
+.header .myaccount-list, .header .help-center-list{
+    background-color: #fff;
+    position: absolute;
+    top: 22px;
+    border: 1px solid #ededed;
+    border-top: 1px solid #fff;
+    display: none;
+}
+.header .myaccount-list a,.header .help-center-list a{
+    display: block;
+    line-height: 2;
+    padding:0px 21px 5px 10px;
+    text-decoration: none;
+}
+
+.header .help-center-list a:hover{
+    color: #900;
+    background: #d9d9d9;
+}
+.header .myaccount-list a:hover{
+    color: #900;
+    background: #d9d9d9;
+}
+.header .myaccount a,.header .help-center a{
+    display: inline-block;  
+    height: 27px;
+    text-decoration: none;
+}
+.header .js_down-app{
+    width: 97.5px;
+}
+.header .phone-box{
+    margin-left: 1px;
+    position: absolute;
+    z-index: 2;
+}
+.header .down-app{
+    width: 158px;
+    height: 158px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ededed;
+    border-radius: 10px;
+    position: absolute;
+    top: 17px;
+    left: 50%;
+    margin-left: -90px;
+    display: none;
+    z-index: 1;
+}
+
+.header .all-class{
+    padding:10px 10px 12px ;
+    border-bottom: 1px solid #ededed;
+}
+.header .js_all-class{
+    width: 125.5px;
+}
+.header .all-class-list-box{
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    display: none;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ededed;
+}
+.header .all-class-list{
+    width: 1200px;
+    margin: 0 auto;
+}
+.header .all-class-list ul{
+    width: 1280px;
+    margin: 0 auto;
+}
+.header .all-class-list li{
+    width: 240px;
+    height: 70px;
+    margin: 15px 75px 0 0;
+    float: left;
+    overflow: hidden;
+}
+.header .all-class-list h4 {
+    border-bottom: 1px solid #d9d9d9;
+    font-weight: bold;
+}
+.header .all-class-list h4 a{
+    font-size: 14px;
+    line-height:26px;
+}
+.header .all-class-list p a{
+    line-height:22px;
+    margin-right: 10px;
+    float: left;
+}
+.header .more{
+    float: right
+}
+.header .all-class-list a{
+    text-decoration: none;
+}
+.header .all-class-list p a:hover{
+    color: #c52d15;
+}
+.header .all-class-list h4:hover a{
+    color: #c52d15;
+}
+.header .service{
+    width: 140px;
+    height: 30px;
+    position: absolute;
+    top: 20px;
+    right: 0;
+    background: url(../images/index/header_1407.png) -130px -135px no-repeat;
+    display: none;
+}
+.header .call:hover .service{
+    display: block;
+}
+.header .js_myaccount .active,.header .js_help-center .active{
+    background: #fff;
+    border: 1px solid #ededed;
+}
+.header .js_down-app .active{
+    background: #fff; 
+    border: 1px solid #ededed;
+    border-bottom: 1px solid #fff;
+}
+.header .js_all-class .active{
+    background: #fff; 
+    border: 1px solid #ededed; 
+    border-bottom: 1px solid #fff; 
+    padding-bottom: 12px; 
+}
+
+/*登录模块  开始*/
+.header .ceng{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    display: none;
+    cursor: default;
+    z-index:3;
+}
+.header .ceng .login-register{
+    width: 240px;
+    /* height: 180px; */
+    background-color: #fff;
+    /* border-radius: 10px; */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -150px;
+    margin-top: -150px;
+    padding: 10px 30px 50px;
+}
+
+.header .login-register-tab1{
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+    margin:0 10px 10px;
+}
+
+.header .err1,.header .err2{
+    color: #a71b1c;
+    visibility: hidden;
+}
+.header .user,.header .pwd{
+    width: 235px;
+    height: 35px;
+    padding-left: 5px;
+    outline: none;
+    border: none;
+    border: 1px solid #bdbdbd;
+    background-color: #ddd;
+}
+.header .err2{
+    display: inline-block;
+    margin-bottom: 10px;
+}
+.header .findPWD{
+    margin-left: 30px;
+}
+.header .ceng button{
+    width: 240px;
+    height: 35px;
+    margin-top: 20px;
+    /* border-radius: 35px; */
+    background-color: #a71b1c;
+    outline: none;
+    border:none;
+    color: #fff;
+    font-size: 18px;
+}
+
+.header .exit-button{
+    display: none;
+}
+
+/*登录模块  结束*/
+
+/* ======================头部 结束*/
+

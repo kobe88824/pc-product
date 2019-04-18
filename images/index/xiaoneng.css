@@ -1,0 +1,26 @@
+/*xiaoneng 客服按钮插件 */
+.xiaoneng { vertical-align:middle; padding:0; }
+.xiaoneng em { vertical-align:middle; cursor:pointer; display:inline-block; padding:0; margin:0; width:77px; height:20px; background:#eee url(images/loading_tiny.gif) no-repeat center center; }
+.xiaoneng em.online { background-image:url(button/btn_service_online.gif); background-color:transparent; }
+.xiaoneng em.offline,
+.xiaoneng em.consult { background-image:url(button/btn_service_offline.png); _background-image:url(button/btn_service_offline.gif); background-color:transparent; }
+.plg-livechat-kefu-mini em { width:16px; height:16px; }
+.plg-livechat-kefu-mini em.online { height:18px; background-image:url(button/btn_service_s_online.gif); background-color:transparent; }
+.plg-livechat-kefu-mini em.offline,
+.plg-livechat-kefu-mini em.consult { background-image:url(button/btn_service_s_offline.png); _background-image:url(button/btn_service_s_offline.gif); background-color:transparent; }
+/* plg-livechat-msg 在线消息插件 */
+.plg-livechat-msg { vertical-align:middle; padding:0; position:relative; cursor:pointer; }
+.plg-livechat-msg label { vertical-align:middle; cursor:pointer; display:inline-block; padding:0; margin:0; width:77px; height:20px; background:#eee url(images/loading_tiny.gif) no-repeat center center; margin-top:-3px; }
+.plg-livechat-msg label.online { background-image:url(button/btn_info_online.gif); background-color:transparent; }
+.plg-livechat-msg label.offline { background-image:url(button/btn_info_offline.gif); background-color:transparent; }
+.plg-livechat-msg em { display:block; width:27px; height:22px; line-height:18px; font-size:12px; font-weight:normal; font-style:normal; color:#fff; background:url(images/sprite_chatbar.png) no-repeat; position:absolute; right:0; top:-20px; text-align:center; font-family:Arial; }
+.plg-livechat-msg span.msglist { color:#333; background-color:#ffa; position:absolute; display:block; left:0; top:-30px; border:solid 1px #FFBD5B; line-height:20px; height:20px; width:auto; max-width:300px; *width:230px; padding:0 5px; }
+.plg-livechat-msg span.msglist font { display:block; height:20px; line-height:20px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; font-size:12px; *width:230px; font-family:Arial,"宋体"; }
+.plg-livechat-msg span.msglist font u { color:#999; text-decoration:none; }
+.plg-livechat-msg span.msglist b { position:absolute; display:block; overflow:hidden; font-size:1px; line-height:1px; width:11px; height:6px; top:20px; left:35px; background:url(images/bg_tips.gif) no-repeat -57px -15px; }
+.plg-livechat-msg span.msglist-bottom { top:22px; }
+.plg-livechat-msg span.msglist-bottom b { top:-6px; background-position:-45px -15px; }
+.plg-livechat-msg span.msg1024 { left:auto; right:0; text-align:right; }
+.plg-livechat-msg span.msg1024 b { left:auto; right:35px; }
+.plg-livechat-msg span.msgtips { color:#f00; background-color:#ffc; width:230px; text-align:center; padding:0; }
+.plg-livechat-msg span.msgtips font { width:auto; }

@@ -1,0 +1,547 @@
+
+/* ======================搜索 */
+.search{
+    width: 100%;
+    min-width: 950px;
+    border-bottom: 5px solid #a71b1c;
+}
+.search .search-content{
+	width: 950px;
+	height: 100px;
+	margin:0 auto;
+	position: relative;
+}
+.search .logo{
+    width: 75px;
+    height: 75px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -37.5px;
+    background: url(../images/index/logo.png) 0 0 no-repeat
+}
+.search .logo a{
+    display: block;
+    width: 75px;
+    height: 75px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.search .search-right{
+    float: right;
+    margin-top: 32px;
+    width: 570px;
+    height: 35px;
+    background: url(../images/index/cart_tit_new.png) 0px 0px no-repeat;
+}
+
+/* ======================搜索 结束 */
+/* ====================购物车 开始 */
+.mycar{
+    width: 100%;
+    background-color: #f7f7f7;
+    padding: 20px 0 ;
+
+}
+/* .mycar .content{
+    width: 950px;
+    margin:  0 auto ;
+    padding-top:50px;
+} */
+/* 购物车部分 开始 */
+.mycar .car{
+    width: 950px;
+    /* padding: 0 20px; */
+    margin: 0 auto;
+    background-color: #fff;
+}
+.mycar .car .title{
+    height: 36px;
+    line-height: 36px;
+    padding-top: 10px;
+    border-bottom: dotted 1px #ccc;
+}
+.mycar .car .title h3{
+    float: left;
+    margin-left: 20px;
+    font-size: 16px;
+    color: #000;
+}
+.mycar .car .title a{
+    display: block;
+    float: right;
+    color: #06c;
+    padding:0 20px;
+    background: url(../images/index/ico_myfavor.png) left center no-repeat ;
+}
+.mycar .car .car-empty{
+    height: 150px;
+    padding: 50px 0 0 435px;
+    background: url(../images/index/bg_empty_919.png) no-repeat 270px center;
+}
+.mycar .car .car-empty p{
+    line-height: 34px;
+    font-size: 14px;
+    color: #000;
+}
+.mycar .car .car-empty p{
+    line-height: 34px;
+    font-size: 14px;
+    color: #000;
+}
+.mycar .car .car-empty span{
+    cursor: pointer;
+    display: inline-block;
+    margin:10px 5px 0 0;
+    width: 116px;
+    height: 28px;
+    line-height: 28px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    background-color: #d10208;
+    border: solid 1px #a71226;
+    border-radius: 3px;
+}
+.mycar .car .car-empty a{
+    color: #06c;
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    margin-top: 10px;
+}
+.mycar .car-header{
+    padding-top: 44px;
+    position: relative;
+    display: none;
+}
+.mycar .car-header ul{
+    height: 36px;
+    line-height: 36px;
+    padding: 0 10px;
+    background-color: #f3f3f3;
+}
+.mycar .car-header li{
+    float: left;
+}
+.mycar .car-header .item-check{
+    width: 34px;
+    text-align: center;
+}
+.mycar .car-header .item-name{
+    width: 490px;
+}
+.mycar .car-header .item-price,
+.mycar .car-header .item-total{
+    width: 100px;
+}
+.mycar .car-header .item-count{
+    width: 140px;
+}
+.mycar .car-header .item-action{
+    width: 60px;
+}
+.mycar .car-header .select-all {
+    width: 14px;
+    height: 14px;
+    margin: 11px auto;
+}
+/*购物车店铺商品部分 开始*/
+.mycar .car-store{
+    position: relative;
+    padding-top: 10px;
+    color: #666;
+}
+.mycar .store-info{
+    height: 34px;
+    line-height: 34px;
+    padding: 0 10px;
+}
+.mycar .store-info input{
+    width: 14px;
+    height: 14px;
+    margin: 10px;
+    float: left;
+} 
+.mycar .store-info a{
+    font-size: 14px;
+    color: #1475ba;
+    padding-left: 21px;
+    background: url(../images/index/icons.png) no-repeat 0 9px;
+    float: left;
+}
+.mycar .store-items{
+    border: solid 1px #e8e8e8;
+    padding: 0 9px;
+}
+.mycar .store-item{
+    /* position: relative; */
+    /* z-index: 1; */
+    padding: 15px 0;
+    border-top: dotted 1px #ccc;
+} 
+.mycar .store-item>div{
+    float: left;
+}
+.mycar .store-items .item-check{
+    width: 34px;
+    text-align: center;
+}
+.mycar .store-items .item-pic img{
+    display: block;
+    width: 78px;
+    height: 78px;
+    border: solid 1px #eee;
+}
+.mycar .store-items .item-name{
+    width: 190px;
+    margin-left: 10px;
+    padding-right: 10px;
+    height: 80px;
+    overflow: hidden;
+}
+.mycar .store-items .item-attr{
+    width: 180px;
+}
+.mycar .store-items .item-price{
+    width: 120px;
+}
+.mycar .store-items .item-count{
+    width: 140px;
+}
+.mycar .store-items .item-count span{
+    float: left;
+    width: 22px;
+    height: 22px;
+    line-height: 22px;
+    text-align: center;
+    border: solid 1px #ccc;
+    margin-right: -1px;
+    cursor: default;
+}
+.mycar .store-items .item-count .btn-up{
+    margin-left: -1px;
+}
+.mycar .store-items .item-count .disabled{
+    background-color: #eee;
+    cursor: not-allowed;
+}
+.mycar .store-items .item-count input{
+    float: left;
+    width: 44px;
+    height: 22px;
+    line-height: 22px;
+    padding: 0;
+    text-align: center;
+    border: solid 1px #ccc;
+    background-color: #fff;
+}
+.mycar .store-items .item-total{
+    width: 100px;
+    font-weight: bold;
+    color: #c42e15;
+}
+.mycar .store-items .item-action{
+    width: 60px;
+    cursor: pointer;
+}
+.mycar .store-items .item-action .favor{
+    color: #06c;
+}
+.mycar .car-foot{
+    padding: 15px 10px 30px;
+    height: 24px;
+    line-height: 24px;
+    display: none;
+}
+.mycar .car-foot input {
+    width: 14px;
+    height: 14px;
+    margin: 0 10px;
+    vertical-align: middle;
+}
+.mycar .car-foot a {
+    float: left;
+    height: 22px;
+    line-height: 22px;
+    margin-left: 20px;
+    padding: 0 18px 0 40px;
+    border: solid 1px #bbb;
+    border-radius: 4px;
+    text-decoration: none;
+    cursor: default;
+}
+.mycar .car-foot a:hover {
+    background-color: #f6f6f6;
+}
+.mycar .car-foot .btn-bath {
+    background: #fff url(../images/index/icons.png) no-repeat 19px -77px;
+}
+.mycar .car-foot .btn-clear {
+    background: #fff url(../images/index/icons.png) no-repeat 19px -109px;
+}
+/*购物车店铺商品部分 结束*/
+.mycar .car-bar{
+    width: 100%;
+    height: 60px;
+    background-color: #f3f3f3;
+    display: none;
+}
+.mycar .car-bar-fix{
+    border-top: solid 1px #ccc;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+.mycar .car-bar .content{
+    /* position: relative; */
+    width: 950px;
+    height: 40px;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+
+.mycar .car-bar .prod-count,
+.mycar .car-bar .prod-price,
+.mycar .car-bar .prod-discount{
+    float: left;
+    width: 100px;
+    line-height: 20px;
+}
+.mycar .car-bar span{
+    font-weight: bold;
+}
+.mycar .car-bar .prod-total{
+    float: left;
+    line-height: 20px;
+}
+.mycar .car-bar .prod-total p{
+    float: left;
+}
+.mycar .car-bar .prod-total .num{
+    line-height: 40px;
+    margin-left: 5px;
+    color: #c42e15;
+    font-size: 36px;
+}
+.mycar .fr a{
+    float: left;
+    width: 98px;
+    height: 38px;
+    line-height: 38px;
+    margin-right: 10px;
+    text-align: center;
+    font-size: 14px;
+    background-color: #fff;
+    border: solid 1px #bbb;
+    border-radius: 4px;
+    text-decoration: none;
+}
+.mycar .fr span{
+    float: left;
+    width: 130px;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    background-color: #d10208;
+    border: solid 1px #a61325;
+    border-radius: 4px;
+}
+
+.mycar .hot{
+    width: 950px;
+    margin: 50px auto 0;
+    padding: 20px 0;
+    background-color: #fff;
+    border: 1px solid #e9e9e9;
+}
+.mycar .hot h3{
+    margin: -6px 0 10px;
+    padding-left: 20px;
+    line-height: 32px;
+    height: 32px;
+    overflow: hidden;
+    font-size: 16px;
+    color: #000;
+}
+.mycar .hot-con{
+    border-top: 1px solid #e9e9e9;
+    padding-bottom: 20px;
+    width: 950px;
+    height: 205px;
+    overflow: hidden;
+    position: relative;
+}
+.mycar .hot ul{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 205px;
+    width: 2000px;
+}
+.mycar .hot li{
+    float: left;
+    width: 160px;
+    cursor: pointer;
+    padding: 20px 15px 0 15px;
+    position: relative;
+}
+.mycar .hot li a{
+    position: relative;
+    display: block;
+    width: 160px;
+    height: 160px;
+}
+.mycar .hot li img{
+    display: block;
+    width: 160px;
+    height: 160px;
+}
+.mycar .hot li a span{
+    position: absolute;
+    font-size: 12px;
+    color: #666;
+    height: 32px;
+    line-height: 32px;
+    overflow: hidden;
+    bottom: 0;
+    left: 0;
+    background: rgba(255,255,255,.4);
+    text-indent: 5px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 160px;
+    font-weight: bold;
+}
+.mycar .hot li .minprice{
+    float: left;
+    font-size: 18px;
+    font-weight: bold;
+    color: #d50009;
+}
+.mycar .hot li .maxprice{
+    float: right;
+    font-size: 13px;
+    color: #666;
+    margin-top: 3px;
+}
+/*改变 .mycar 的背景颜色*/
+.car-bkg{
+    padding: 0;
+    background-color: #fff;
+}
+/* 购物车部分 结束 */
+/* 热销商品部分 开始 */
+/* 热销商品部分 结束 */
+/* =====================购物车 结束 */
+
+/*=============底部 开始*/
+.footer{
+    width: 950px;
+    margin: 20px auto;
+}
+.footer .footer-banner{
+    height: 56px;
+    width: 100%;
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+    background: url(../images/index/footer1603.png) 0px -34px no-repeat;
+}
+.footer .footer-banner a{
+    float: left;
+    height: 52px;
+    cursor: pointer;
+    /* line-height: 52px; */
+}
+.footer .footer-banner a.banner1{
+    width: 80px;
+    margin-left: 30px;
+}
+.footer .footer-banner a.banner2{
+    width: 120px;
+    margin-left: 30px;
+}
+.footer .footer-banner a.banner3{
+    width: 200px;
+    margin-left: 95px;
+}
+.footer .footer-banner a.banner4{
+    width: 200px;
+    margin-left: 95px;
+}
+/* 购物助手链接 */
+.footer .footer-helper{
+    width: 950px;
+    padding:15px 0 20px; 
+}
+.footer a:link{
+    text-decoration:none;
+    color: #888;
+}
+.footer a:visited{
+    text-decoration:none;
+    color: #888;
+}
+.footer a:hover{
+    text-decoration:none;
+    color: #888;
+}
+.footer a:active{
+    text-decoration:none;
+    color: #888;
+}
+.footer .footer-helper ul li{
+    width: 120px;
+    /* height: 182px; */
+    font-size: 12px;
+    float: left;
+    padding-right: 42px;
+}
+.footer .footer-helper ul li h4{
+    color: #666;
+    line-height: 22px;
+    border-bottom: dotted 1px #ccc;
+    margin: 0 0 5px;
+}
+.footer .footer-helper ul li .href-box{
+    width: 120px;
+}
+.footer .footer-helper ul li .href-box a{
+    width: 120px;
+    float: left;
+    line-height: 22px;
+}
+.footer .footer-helper ul li.footer-left{
+    padding-left: 20px;
+}
+.footer .footer-helper ul li.footer-right{
+    padding: 0;
+}
+/* 购物助手链接结束 */
+.footer .footer-license{
+    font-size: 12px;
+    color:#999;
+    padding: 15px 0 5px;
+    border-top: solid 1px #ddd;
+}
+.footer .copyright{
+    line-height: 20px;
+    color: #999;
+    font-size: 12px;
+}
+.footer .footer-icon{
+    margin-top: 15px;
+    height: 34px;
+    background: url(../images/index/footer1603_950.png) 0px 0px no-repeat;
+}
+.footer .footer-icon a{
+    float: left;
+    width: 100px;
+    height: 34px;
+    margin-right: 5px;
+}
+/* 底部结束 */
